@@ -1,4 +1,4 @@
-# CitizenHealth Smart ID - Prototype
+# HealthLink Smart ID - Prototype
 
 A comprehensive mobile app prototype for Malaysia's Smart Health ID system, connecting Citizens, Guardians, and Healthcare Providers.
 
