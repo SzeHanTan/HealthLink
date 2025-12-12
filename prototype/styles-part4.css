@@ -1,0 +1,680 @@
+/* ========================================
+   Screen 10: Emergency Map
+   ======================================== */
+
+.map-content {
+    background: var(--bg-light);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header.transparent {
+    background: transparent;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.page-header.transparent .back-btn,
+.page-header.transparent .filter-btn {
+    background: white;
+    box-shadow: var(--shadow-md);
+}
+
+.page-header.transparent h2 {
+    background: white;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 14px;
+    box-shadow: var(--shadow-md);
+}
+
+.map-placeholder {
+    height: 280px;
+    background: linear-gradient(180deg, #E8F4EA 0%, #D1E8D5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.map-bg {
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    position: relative;
+}
+
+.map-marker {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: var(--shadow-md);
+    transform: translate(-50%, -50%);
+}
+
+.map-marker.hospital {
+    background: #DC2626;
+    color: white;
+}
+
+.map-marker.clinic {
+    background: var(--primary);
+    color: white;
+}
+
+.map-marker.pharmacy {
+    background: var(--secondary);
+    color: white;
+}
+
+.map-marker.user-loc {
+    background: white;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+}
+
+.facilities-sheet {
+    flex: 1;
+    background: white;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    margin-top: -20px;
+    padding: 12px 20px 24px;
+    position: relative;
+    z-index: 5;
+}
+
+.sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: var(--border);
+    border-radius: var(--radius-full);
+    margin: 0 auto 16px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+}
+
+.filter-tab {
+    background: var(--bg-light);
+    border: none;
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-tab.active {
+    background: var(--primary);
+    color: white;
+}
+
+.facilities-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.facility-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.facility-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.facility-icon.hospital {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.facility-icon.clinic {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.facility-icon.pharmacy {
+    background: #D1FAE5;
+    color: var(--secondary);
+}
+
+.facility-details {
+    flex: 1;
+}
+
+.facility-details h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.facility-details .distance {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.facility-meta {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.facility-meta span {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.facility-meta .status.open {
+    color: var(--success);
+}
+
+.facility-meta .status.open i {
+    font-size: 6px;
+}
+
+.facility-meta .wait {
+    color: var(--text-secondary);
+}
+
+.nav-mini {
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-full);
+    color: white;
+    cursor: pointer;
+}
+
+.share-location-btn {
+    width: 100%;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 14px;
+    border-radius: var(--radius-lg);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* ========================================
+   Screen 11: Chatbot
+   ======================================== */
+
+.chat-content {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-light);
+    height: 100%;
+}
+
+.chat-header {
+    background: white;
+    padding: 8px 16px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.chat-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bot-avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary) 0%, #4F46E5 100%);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.bot-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bot-info .online {
+    font-size: 11px;
+    color: var(--success);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bot-info .online i {
+    font-size: 6px;
+}
+
+.voice-mode-btn {
+    width: 36px;
+    height: 36px;
+    background: var(--primary-light);
+    border: none;
+    border-radius: var(--radius-full);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, #4F46E5 100%);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.message-bubble {
+    max-width: 75%;
+    background: white;
+    padding: 12px 14px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.message.user .message-bubble {
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-lg) var(--radius-lg) 4px var(--radius-lg);
+}
+
+.message.bot .message-bubble {
+    border-radius: var(--radius-lg) var(--radius-lg) var(--radius-lg) 4px;
+}
+
+.message-bubble p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.message-time {
+    font-size: 10px;
+    color: var(--text-light);
+    display: block;
+}
+
+.message.user .message-time {
+    color: rgba(255,255,255,0.7);
+}
+
+.inline-card {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.inline-card i {
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.inline-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inline-card strong {
+    font-size: 13px;
+}
+
+.inline-card span {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-left: 42px;
+}
+
+.quick-reply {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-reply:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+.chat-input-area {
+    background: white;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+}
+
+.voice-input-btn {
+    width: 44px;
+    height: 44px;
+    background: var(--primary-light);
+    border: none;
+    border-radius: var(--radius-full);
+    color: var(--primary);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-input-area input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: 12px 16px;
+    font-size: 14px;
+    outline: none;
+}
+
+.chat-input-area input:focus {
+    border-color: var(--primary);
+}
+
+.send-btn {
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-full);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accessibility-hint {
+    background: var(--primary-light);
+    padding: 10px 16px;
+    font-size: 11px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* ========================================
+   Screen 12: Child Dashboard
+   ======================================== */
+
+.child-dashboard {
+    background: linear-gradient(180deg, #FEF3C7 0%, #FFFBEB 100%);
+    padding: 0 0 24px;
+}
+
+.child-header {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    padding: 16px 20px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: white;
+}
+
+.child-header .back-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+}
+
+.child-profile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.child-avatar {
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.3);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.child-info .viewing-as {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.child-info h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.child-info .child-id {
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: monospace;
+}
+
+.switch-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: var(--radius-full);
+    color: white;
+    cursor: pointer;
+}
+
+.child-quick-stats {
+    display: flex;
+    gap: 12px;
+    padding: 0 20px;
+    margin-top: -16px;
+}
+
+.stat-card {
+    flex: 1;
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card i {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.immunization-section {
+    padding: 20px;
+}
+
+.immunization-section h3 {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.immunization-section h3 i {
+    color: var(--success);
+}
+
+.vaccine-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.vaccine-card.due {
+    border: 2px solid var(--warning);
+}
+
+.vaccine-status {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: #FEF3C7;
+    color: var(--warning);
+}
+
+.vaccine-status.done {
+    background: #D1FAE5;
+    color: var(--success);
+}
+
+.vaccine-info {
+    flex: 1;
+}
+
+.vaccine-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.vaccine-info span {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.book-vaccine-btn {
+    background: var(--warning);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.child-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 20px;
+}
+
+.child-action {
+    background: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+}
+
+.child-action:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.child-action i {
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.child-action span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+

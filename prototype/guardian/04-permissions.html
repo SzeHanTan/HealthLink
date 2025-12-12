@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Access - GuardianHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>.screen-list a.active { background: var(--guardian); }</style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="index.html" class="guardian active"><i class="fas fa-user-shield"></i> Guardian App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>4. My Access</h1><p>View permissions granted by Ahmad Jr.</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #F5F7FA; padding: 0; padding-bottom: 20px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 16px; background: white;">
+                        <a href="03-dependent.html" style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <h2 style="font-size: 18px; font-weight: 700;">My Access Rights</h2>
+                        <button style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; color: #1A1D26; font-size: 16px;"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                    
+                    <!-- Info Banner -->
+                    <div style="margin: 16px 20px; background: linear-gradient(135deg, #EEF2FF, #E0E7FF); border-radius: 16px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px;">
+                        <i class="fas fa-lock" style="font-size: 18px; color: #4F46E5; margin-top: 2px;"></i>
+                        <div>
+                            <p style="font-size: 13px; color: #3730A3; line-height: 1.4;">These permissions are controlled by <strong>Ahmad Jr.</strong> through the Citizen App. Contact them to request changes.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Granted Permissions -->
+                    <div style="padding: 0 20px;">
+                        <h3 style="font-size: 12px; color: #6B7280; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">✓ Granted Access</h3>
+                        <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F3F4F6; gap: 12px;">
+                                <div style="width: 36px; height: 36px; background: #ECFDF5; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-file-medical" style="color: #10B981; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">View Health Records</span><span style="font-size: 11px; color: #6B7280;">Medical history, lab results, diagnoses</span></div>
+                                <i class="fas fa-check-circle" style="color: #10B981; font-size: 18px;"></i>
+                            </div>
+                            <div style="display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F3F4F6; gap: 12px;">
+                                <div style="width: 36px; height: 36px; background: #ECFDF5; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-pills" style="color: #10B981; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Manage Medications</span><span style="font-size: 11px; color: #6B7280;">View prescriptions, track doses</span></div>
+                                <i class="fas fa-check-circle" style="color: #10B981; font-size: 18px;"></i>
+                            </div>
+                            <div style="display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F3F4F6; gap: 12px;">
+                                <div style="width: 36px; height: 36px; background: #ECFDF5; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-calendar-check" style="color: #10B981; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Book Appointments</span><span style="font-size: 11px; color: #6B7280;">Schedule, reschedule, cancel visits</span></div>
+                                <i class="fas fa-check-circle" style="color: #10B981; font-size: 18px;"></i>
+                            </div>
+                            <div style="display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F3F4F6; gap: 12px;">
+                                <div style="width: 36px; height: 36px; background: #ECFDF5; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-credit-card" style="color: #10B981; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Pay Medical Bills</span><span style="font-size: 11px; color: #6B7280;">View invoices, make payments</span></div>
+                                <i class="fas fa-check-circle" style="color: #10B981; font-size: 18px;"></i>
+                            </div>
+                            <div style="display: flex; align-items: center; padding: 14px 16px; gap: 12px;">
+                                <div style="width: 36px; height: 36px; background: #ECFDF5; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-heart-pulse" style="color: #10B981; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Emergency Access</span><span style="font-size: 11px; color: #6B7280;">Critical info visible to responders</span></div>
+                                <i class="fas fa-check-circle" style="color: #10B981; font-size: 18px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Denied Permissions -->
+                    <div style="padding: 16px 20px 0;">
+                        <h3 style="font-size: 12px; color: #6B7280; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">✕ Not Granted</h3>
+                        <div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F3F4F6; gap: 12px; opacity: 0.7;">
+                                <div style="width: 36px; height: 36px; background: #FEF2F2; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-user-pen" style="color: #DC2626; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Edit Personal Info</span><span style="font-size: 11px; color: #6B7280;">Name, address, contact details</span></div>
+                                <i class="fas fa-xmark-circle" style="color: #DC2626; font-size: 18px;"></i>
+                            </div>
+                            <div style="display: flex; align-items: center; padding: 14px 16px; border-bottom: 1px solid #F3F4F6; gap: 12px; opacity: 0.7;">
+                                <div style="width: 36px; height: 36px; background: #FEF2F2; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-share-nodes" style="color: #DC2626; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Share with Third Parties</span><span style="font-size: 11px; color: #6B7280;">Export or share records externally</span></div>
+                                <i class="fas fa-xmark-circle" style="color: #DC2626; font-size: 18px;"></i>
+                            </div>
+                            <div style="display: flex; align-items: center; padding: 14px 16px; gap: 12px; opacity: 0.7;">
+                                <div style="width: 36px; height: 36px; background: #FEF2F2; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-users-gear" style="color: #DC2626; font-size: 16px;"></i></div>
+                                <div style="flex: 1;"><span style="font-size: 14px; font-weight: 500; display: block;">Manage Other Guardians</span><span style="font-size: 11px; color: #6B7280;">Add or remove guardians</span></div>
+                                <i class="fas fa-xmark-circle" style="color: #DC2626; font-size: 18px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Request More Access -->
+                    <div style="padding: 16px 20px 0;">
+                        <button class="clickable" style="width: 100%; background: white; color: #4F46E5; border: 2px dashed #C7D2FE; padding: 14px; border-radius: 14px; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;">
+                            <i class="fas fa-paper-plane"></i> Request Additional Access
+                        </button>
+                    </div>
+                    
+                    <!-- Guardianship Info -->
+                    <div style="padding: 16px 20px;">
+                        <div style="background: #F9FAFB; border-radius: 12px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span style="font-size: 11px; color: #6B7280; display: block;">Guardianship granted by</span>
+                                <span style="font-size: 13px; font-weight: 600;">Ahmad Razif (Parent)</span>
+                            </div>
+                            <div style="text-align: right;">
+                                <span style="font-size: 11px; color: #6B7280; display: block;">Valid until</span>
+                                <span style="font-size: 13px; font-weight: 600;">31 Dec 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="03-dependent.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">4 / 6</span>
+            <a href="05-appointments.html" class="nav-btn next" style="background: var(--guardian);">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-login.html">1</a><a href="02-dashboard.html">2</a><a href="03-dependent.html">3</a><a href="04-permissions.html" class="active">4</a><a href="05-appointments.html">5</a><a href="06-alerts.html">6</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

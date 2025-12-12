@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - GuardianHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>.screen-list a.active { background: var(--guardian); }</style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="index.html" class="guardian active"><i class="fas fa-user-shield"></i> Guardian App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>6. Alerts & Notifications</h1><p>Emergency alerts and health reminders</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 16px; background: white;">
+                        <a href="02-dashboard.html" style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <h2 style="font-size: 18px; font-weight: 700;">Notifications</h2>
+                        <button style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; color: #1A1D26; font-size: 16px;"><i class="fas fa-check-double"></i></button>
+                    </div>
+                    <div style="display: flex; gap: 8px; padding: 12px 20px; overflow-x: auto;">
+                        <button style="background: #4F46E5; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap;">All (5)</button>
+                        <button style="background: white; border: 1px solid #E5E7EB; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 500; white-space: nowrap;">Emergency</button>
+                        <button style="background: white; border: 1px solid #E5E7EB; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 500; white-space: nowrap;">Reminders</button>
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <h3 style="font-size: 12px; color: #6B7280; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Today</h3>
+                        <div class="clickable" style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 16px; padding: 16px; display: flex; gap: 12px; margin-bottom: 12px;">
+                            <div class="pulse" style="width: 44px; height: 44px; background: #FEE2E2; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-heart-pulse" style="color: #DC2626; font-size: 18px;"></i></div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                                    <span style="font-size: 14px; font-weight: 600; color: #991B1B;">Emergency Alert</span>
+                                    <span style="font-size: 11px; color: #B91C1C;">10 min ago</span>
+                                </div>
+                                <p style="font-size: 13px; color: #B91C1C; line-height: 1.4;">Ahmad triggered emergency SOS at Pavilion KL. Location shared.</p>
+                                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                                    <a href="../citizen/10-map.html" style="background: #DC2626; color: white; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; text-decoration: none;"><i class="fas fa-location-dot"></i> View Location</a>
+                                    <button style="background: white; color: #DC2626; border: 1px solid #DC2626; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600;"><i class="fas fa-phone"></i> Call</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; gap: 12px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="width: 44px; height: 44px; background: #D1FAE5; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-calendar-check" style="color: #059669; font-size: 18px;"></i></div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                                    <span style="font-size: 14px; font-weight: 600;">Appointment Confirmed</span>
+                                    <span style="font-size: 11px; color: #6B7280;">2 hours ago</span>
+                                </div>
+                                <p style="font-size: 13px; color: #6B7280; line-height: 1.4;">Ahmad Jr.'s vaccination booked for 12 Dec, 9:00 AM at KK SS2</p>
+                            </div>
+                        </div>
+                        <h3 style="font-size: 12px; color: #6B7280; margin: 20px 0 12px; text-transform: uppercase; letter-spacing: 0.5px;">Yesterday</h3>
+                        <div class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; gap: 12px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="width: 44px; height: 44px; background: #FEF3C7; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-pills" style="color: #D97706; font-size: 18px;"></i></div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                                    <span style="font-size: 14px; font-weight: 600;">Medication Reminder</span>
+                                    <span style="font-size: 11px; color: #6B7280;">Yesterday</span>
+                                </div>
+                                <p style="font-size: 13px; color: #6B7280; line-height: 1.4;">Mak Jah's Metformin supply is running low (3 days left)</p>
+                            </div>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; gap: 12px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="width: 44px; height: 44px; background: #EEF2FF; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-file-medical" style="color: #4F46E5; font-size: 18px;"></i></div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                                    <span style="font-size: 14px; font-weight: 600;">Lab Results Ready</span>
+                                    <span style="font-size: 11px; color: #6B7280;">Yesterday</span>
+                                </div>
+                                <p style="font-size: 13px; color: #6B7280; line-height: 1.4;">Ahmad's blood test results are now available</p>
+                            </div>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; gap: 12px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="width: 44px; height: 44px; background: #FCE7F3; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-syringe" style="color: #DB2777; font-size: 18px;"></i></div>
+                            <div style="flex: 1;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px;">
+                                    <span style="font-size: 14px; font-weight: 600;">Vaccination Due Soon</span>
+                                    <span style="font-size: 11px; color: #6B7280;">2 days ago</span>
+                                </div>
+                                <p style="font-size: 13px; color: #6B7280; line-height: 1.4;">Ahmad Jr. is due for HPV vaccination by end of month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="05-appointments.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">6 / 6</span>
+            <a href="index.html" class="nav-btn next" style="background: var(--guardian);">All Screens <i class="fas fa-th-large"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-login.html">1</a><a href="02-dashboard.html">2</a><a href="03-dependent.html">3</a><a href="04-permissions.html">4</a><a href="05-appointments.html">5</a><a href="06-alerts.html" class="active">6</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

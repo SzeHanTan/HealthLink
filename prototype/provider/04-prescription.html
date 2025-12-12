@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Prescription - ProviderHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        .screen-list a.active { background: var(--provider); }
+        .phone-frame { width: 800px; height: 600px; border-radius: 24px; padding: 10px; }
+        .phone-frame .phone-screen { border-radius: 18px; }
+        .phone-frame .phone-notch { display: none; }
+    </style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../guardian/index.html" class="guardian"><i class="fas fa-user-shield"></i> Guardian App</a>
+        <a href="index.html" class="provider active"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>4. e-Prescription</h1><p>Digital prescription system with drug interaction checks</p></div>
+    <div class="phone-container">
+        <div class="phone-frame">
+            <div class="phone-screen" style="background: #F5F7FA;">
+                <!-- Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: white; border-bottom: 1px solid #E5E7EB;">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <a href="02-patient.html" style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <div><h2 style="font-size: 20px; font-weight: 700;">e-Prescription</h2><p style="font-size: 12px; color: #6B7280;">Ahmad Razif • CH-2024-889912</p></div>
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        <button style="background: #F5F7FA; color: #1A1D26; border: none; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 500;"><i class="fas fa-clock-rotate-left"></i> History</button>
+                        <button style="background: #10B981; color: white; border: none; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 600;"><i class="fas fa-paper-plane"></i> Send to Pharmacy</button>
+                    </div>
+                </div>
+                <div style="display: flex; height: calc(100% - 72px);">
+                    <!-- Prescription Form -->
+                    <div style="flex: 1; padding: 20px; overflow-y: auto;">
+                        <!-- Warning Alert -->
+                        <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 12px; padding: 14px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-triangle-exclamation" style="font-size: 20px; color: #DC2626;"></i>
+                            <div><span style="font-weight: 600; color: #991B1B; display: block;">Allergy Alert: Penicillin</span><span style="font-size: 12px; color: #B91C1C;">Do not prescribe penicillin-class antibiotics</span></div>
+                        </div>
+                        <div style="background: white; border-radius: 16px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px;">
+                            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;"><i class="fas fa-pills" style="color: #8B5CF6;"></i> Prescribed Medications</h3>
+                            <!-- Medication 1 -->
+                            <div style="background: #F5F7FA; border-radius: 12px; padding: 14px; margin-bottom: 12px;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                    <div><span style="font-size: 15px; font-weight: 600; display: block;">Paracetamol 500mg</span><span style="font-size: 12px; color: #6B7280;">Tablets</span></div>
+                                    <span style="background: #D1FAE5; color: #065F46; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;">✓ Safe</span>
+                                </div>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                                    <div><span style="font-size: 11px; color: #6B7280; display: block;">Dosage</span><span style="font-size: 13px; font-weight: 600;">1 tablet</span></div>
+                                    <div><span style="font-size: 11px; color: #6B7280; display: block;">Frequency</span><span style="font-size: 13px; font-weight: 600;">3x daily</span></div>
+                                    <div><span style="font-size: 11px; color: #6B7280; display: block;">Duration</span><span style="font-size: 13px; font-weight: 600;">5 days</span></div>
+                                </div>
+                            </div>
+                            <!-- Medication 2 -->
+                            <div style="background: #F5F7FA; border-radius: 12px; padding: 14px; margin-bottom: 12px;">
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                    <div><span style="font-size: 15px; font-weight: 600; display: block;">Omeprazole 20mg</span><span style="font-size: 12px; color: #6B7280;">Capsules</span></div>
+                                    <span style="background: #D1FAE5; color: #065F46; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;">✓ Safe</span>
+                                </div>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                                    <div><span style="font-size: 11px; color: #6B7280; display: block;">Dosage</span><span style="font-size: 13px; font-weight: 600;">1 capsule</span></div>
+                                    <div><span style="font-size: 11px; color: #6B7280; display: block;">Frequency</span><span style="font-size: 13px; font-weight: 600;">1x morning</span></div>
+                                    <div><span style="font-size: 11px; color: #6B7280; display: block;">Duration</span><span style="font-size: 13px; font-weight: 600;">14 days</span></div>
+                                </div>
+                            </div>
+                            <button style="width: 100%; background: white; border: 2px dashed #E5E7EB; padding: 14px; border-radius: 12px; font-size: 14px; font-weight: 600; color: #6B7280; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;">
+                                <i class="fas fa-plus"></i> Add Medication
+                            </button>
+                        </div>
+                        <!-- Instructions -->
+                        <div style="background: white; border-radius: 16px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 12px;"><i class="fas fa-clipboard-list" style="color: #0066FF; margin-right: 8px;"></i> Special Instructions</h3>
+                            <textarea placeholder="Add any special instructions for the patient..." style="width: 100%; height: 80px; border: 1px solid #E5E7EB; border-radius: 10px; padding: 12px; font-size: 13px; resize: none; font-family: inherit;">Take paracetamol after meals. If symptoms persist after 3 days, please return for follow-up.</textarea>
+                        </div>
+                    </div>
+                    <!-- Sidebar - Drug Check -->
+                    <div style="width: 280px; background: white; border-left: 1px solid #E5E7EB; padding: 20px; overflow-y: auto;">
+                        <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;"><i class="fas fa-shield-check" style="color: #10B981;"></i> Safety Check</h3>
+                        <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 12px; padding: 14px; margin-bottom: 16px;">
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: #10B981;"></i><span style="font-size: 13px; font-weight: 600; color: #065F46;">No Drug Interactions</span></div>
+                            <p style="font-size: 12px; color: #047857;">Prescribed medications are compatible with patient's current medications.</p>
+                        </div>
+                        <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 14px; margin-bottom: 16px;">
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;"><i class="fas fa-info-circle" style="color: #3B82F6;"></i><span style="font-size: 13px; font-weight: 600; color: #1E40AF;">Dosage Check</span></div>
+                            <p style="font-size: 12px; color: #1E40AF;">All dosages are within recommended limits for adult patient (75kg).</p>
+                        </div>
+                        <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">Current Medications</h3>
+                        <div style="font-size: 12px; padding: 10px; background: #F5F7FA; border-radius: 8px; margin-bottom: 8px; display: flex; justify-content: space-between;">
+                            <span>Metformin 500mg</span><span style="color: #10B981;"><i class="fas fa-check"></i></span>
+                        </div>
+                        <div style="font-size: 12px; padding: 10px; background: #F5F7FA; border-radius: 8px; margin-bottom: 8px; display: flex; justify-content: space-between;">
+                            <span>Lisinopril 10mg</span><span style="color: #10B981;"><i class="fas fa-check"></i></span>
+                        </div>
+                        <div style="font-size: 12px; padding: 10px; background: #F5F7FA; border-radius: 8px; margin-bottom: 16px; display: flex; justify-content: space-between;">
+                            <span>Atorvastatin 20mg</span><span style="color: #10B981;"><i class="fas fa-check"></i></span>
+                        </div>
+                        <h3 style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">Prescription Preview</h3>
+                        <div style="background: #F5F7FA; border-radius: 12px; padding: 14px; position: relative;">
+                            <div style="position: absolute; top: 8px; right: 8px;"><i class="fas fa-qrcode" style="font-size: 40px; color: #1A1D26;"></i></div>
+                            <p style="font-size: 11px; color: #6B7280; margin-bottom: 6px;">Rx #2024-12-001</p>
+                            <p style="font-size: 12px; font-weight: 600; margin-bottom: 4px;">Ahmad Razif</p>
+                            <p style="font-size: 11px; color: #6B7280; margin-bottom: 10px;">10 Dec 2024</p>
+                            <p style="font-size: 11px;">1. Paracetamol 500mg x15</p>
+                            <p style="font-size: 11px;">2. Omeprazole 20mg x14</p>
+                            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px dashed #E5E7EB;">
+                                <p style="font-size: 10px; color: #6B7280;">Dr. Sarah Ahmad</p>
+                                <p style="font-size: 10px; color: #6B7280;">KK SS2, Petaling Jaya</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="03-nfc.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">4 / 4</span>
+            <a href="index.html" class="nav-btn next" style="background: var(--provider);">All Screens <i class="fas fa-th-large"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-checkin.html">1</a><a href="02-patient.html">2</a><a href="03-nfc.html">3</a><a href="04-prescription.html" class="active">4</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

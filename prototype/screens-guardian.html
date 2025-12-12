@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitizenHealth Smart ID - Guardian App Screens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-part2.css">
+    <link rel="stylesheet" href="styles-part3.css">
+    <link rel="stylesheet" href="styles-part4.css">
+    <link rel="stylesheet" href="styles-guardian.css">
+</head>
+<body>
+    <header class="prototype-header">
+        <div class="header-content">
+            <div class="logo"><i class="fas fa-user-shield"></i><span>CitizenHealth - Guardian Mode</span></div>
+            <nav class="screen-nav">
+                <a href="all-screens.html" class="nav-btn"><i class="fas fa-user"></i> Citizen App</a>
+                <a href="screens-provider.html" class="nav-btn"><i class="fas fa-hospital"></i> Provider Screens</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="prototype-container">
+        <div class="section-header">
+            <h1><i class="fas fa-user-shield"></i> Guardian App Screens</h1>
+            <p>Interface for parents, caregivers managing dependents (children, elderly, PWDs)</p>
+        </div>
+
+        <div class="screens-grid">
+            
+            <!-- Guardian Screen 1: Guardian Dashboard -->
+            <div class="screen-wrapper">
+                <div class="screen-label">G1. Guardian Dashboard</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content" style="background: linear-gradient(180deg, #4F46E5 0%, #6366F1 100%); padding: 0;">
+                            <!-- Guardian Header -->
+                            <div style="padding: 20px 20px 30px; color: white;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                        <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-user-shield" style="font-size: 20px;"></i>
+                                        </div>
+                                        <div>
+                                            <span style="font-size: 12px; opacity: 0.8;">Guardian Mode</span>
+                                            <h2 style="font-size: 18px; font-weight: 700;">Siti Aminah</h2>
+                                        </div>
+                                    </div>
+                                    <button style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white;">
+                                        <i class="fas fa-bell"></i>
+                                    </button>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.15); border-radius: 12px; padding: 14px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; font-size: 13px;">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>You are managing <strong>3 dependents</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dependents Section -->
+                            <div style="background: #F5F7FA; border-radius: 24px 24px 0 0; padding: 20px; min-height: 500px;">
+                                <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 16px;">My Dependents</h3>
+                                
+                                <!-- Child Dependent -->
+                                <div style="background: white; border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+                                        <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
+                                            <i class="fas fa-child"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 16px; font-weight: 600;">Ahmad Jr.</h4>
+                                            <span style="font-size: 12px; color: #6B7280;">8 years old • Child</span>
+                                        </div>
+                                        <span style="background: #FEF3C7; color: #D97706; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;">
+                                            <i class="fas fa-exclamation-circle"></i> 1 Due
+                                        </span>
+                                    </div>
+                                    <div style="display: flex; gap: 8px;">
+                                        <button style="flex: 1; background: #E6F0FF; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #0066FF; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-file-medical"></i> Records
+                                        </button>
+                                        <button style="flex: 1; background: #E6FFF5; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #00C48C; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-calendar"></i> Appt
+                                        </button>
+                                        <button style="flex: 1; background: #F5E6FF; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #8B5CF6; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-pills"></i> Meds
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Elderly Dependent -->
+                                <div style="background: white; border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+                                        <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #818CF8, #6366F1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
+                                            <i class="fas fa-person-cane"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 16px; font-weight: 600;">Mak Minah</h4>
+                                            <span style="font-size: 12px; color: #6B7280;">72 years old • Elderly</span>
+                                        </div>
+                                        <span style="background: #D1FAE5; color: #065F46; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;">
+                                            <i class="fas fa-check-circle"></i> OK
+                                        </span>
+                                    </div>
+                                    <div style="display: flex; gap: 8px;">
+                                        <button style="flex: 1; background: #E6F0FF; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #0066FF; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-file-medical"></i> Records
+                                        </button>
+                                        <button style="flex: 1; background: #E6FFF5; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #00C48C; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-calendar"></i> Appt
+                                        </button>
+                                        <button style="flex: 1; background: #F5E6FF; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #8B5CF6; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-pills"></i> Meds
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- PWD Dependent -->
+                                <div style="background: white; border-radius: 16px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+                                        <div style="width: 52px; height: 52px; background: linear-gradient(135deg, #F472B6, #EC4899); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px;">
+                                            <i class="fas fa-wheelchair"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 16px; font-weight: 600;">Adik Amir</h4>
+                                            <span style="font-size: 12px; color: #6B7280;">25 years old • PWD</span>
+                                        </div>
+                                        <span style="background: #FEE2E2; color: #DC2626; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;">
+                                            <i class="fas fa-clock"></i> Med Due
+                                        </span>
+                                    </div>
+                                    <div style="display: flex; gap: 8px;">
+                                        <button style="flex: 1; background: #E6F0FF; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #0066FF; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-file-medical"></i> Records
+                                        </button>
+                                        <button style="flex: 1; background: #E6FFF5; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #00C48C; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-calendar"></i> Appt
+                                        </button>
+                                        <button style="flex: 1; background: #F5E6FF; border: none; padding: 10px; border-radius: 10px; font-size: 12px; color: #8B5CF6; font-weight: 600; cursor: pointer;">
+                                            <i class="fas fa-pills"></i> Meds
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Quick Actions -->
+                                <h3 style="font-size: 14px; color: #6B7280; margin: 20px 0 12px;">Quick Actions</h3>
+                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                                    <button style="background: white; border: none; padding: 16px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;">
+                                        <i class="fas fa-calendar-plus" style="font-size: 24px; color: #0066FF;"></i>
+                                        <span style="font-size: 12px; font-weight: 600;">Book Appointment</span>
+                                    </button>
+                                    <button style="background: white; border: none; padding: 16px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;">
+                                        <i class="fas fa-prescription" style="font-size: 24px; color: #00C48C;"></i>
+                                        <span style="font-size: 12px; font-weight: 600;">Renew Prescription</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Nav -->
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 10px 0 28px; border-top: 1px solid #E5E7EB;">
+                                <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #4F46E5; font-size: 10px; cursor: pointer;">
+                                    <i class="fas fa-house" style="font-size: 20px;"></i><span>Home</span>
+                                </button>
+                                <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #9CA3AF; font-size: 10px; cursor: pointer;">
+                                    <i class="fas fa-users" style="font-size: 20px;"></i><span>Dependents</span>
+                                </button>
+                                <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #9CA3AF; font-size: 10px; cursor: pointer;">
+                                    <i class="fas fa-bell" style="font-size: 20px;"></i><span>Alerts</span>
+                                </button>
+                                <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #9CA3AF; font-size: 10px; cursor: pointer;">
+                                    <i class="fas fa-gear" style="font-size: 20px;"></i><span>Settings</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guardian Screen 2: Dependent Detail View -->
+            <div class="screen-wrapper">
+                <div class="screen-label">G2. Dependent Detail View</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                            <!-- Header -->
+                            <div style="background: linear-gradient(135deg, #F59E0B, #D97706); padding: 16px 20px 60px; color: white;">
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                    <button style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; cursor: pointer;">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </button>
+                                    <span style="font-size: 14px; font-weight: 500;">Managing Dependent</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 14px;">
+                                    <div style="width: 64px; height: 64px; background: rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <div>
+                                        <h2 style="font-size: 22px; font-weight: 700;">Ahmad Jr.</h2>
+                                        <p style="font-size: 13px; opacity: 0.9;">8 years old • Smart ID: CH-2024-889913</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content -->
+                            <div style="margin-top: -40px; padding: 0 16px 100px;">
+                                <!-- Smart ID Card -->
+                                <div style="background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 16px; padding: 16px; color: white; margin-bottom: 16px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7;">Smart Health ID</span>
+                                        <i class="fas fa-qrcode" style="opacity: 0.7;"></i>
+                                    </div>
+                                    <div style="font-size: 18px; font-weight: 700; font-family: monospace; letter-spacing: 2px; margin-bottom: 12px;">CH-2024-889913</div>
+                                    <div style="display: flex; gap: 12px;">
+                                        <span style="background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px; font-size: 11px;"><i class="fas fa-droplet"></i> A+</span>
+                                        <span style="background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px; font-size: 11px;"><i class="fas fa-check"></i> No Allergies</span>
+                                    </div>
+                                </div>
+
+                                <!-- Alerts -->
+                                <div style="background: #FEF3C7; border: 1px solid #F59E0B; border-radius: 12px; padding: 14px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px;">
+                                    <i class="fas fa-exclamation-triangle" style="color: #D97706; font-size: 20px;"></i>
+                                    <div>
+                                        <strong style="font-size: 13px; color: #92400E; display: block;">Vaccination Due</strong>
+                                        <span style="font-size: 12px; color: #B45309;">HPV Dose 1 - Due December 2024</span>
+                                    </div>
+                                    <button style="background: #F59E0B; color: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-left: auto; cursor: pointer;">Book</button>
+                                </div>
+
+                                <!-- Action Cards -->
+                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px;">
+                                    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                        <div style="width: 40px; height: 40px; background: #E6F0FF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                            <i class="fas fa-file-medical" style="color: #0066FF;"></i>
+                                        </div>
+                                        <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Health Records</h4>
+                                        <span style="font-size: 11px; color: #6B7280;">View & upload</span>
+                                    </div>
+                                    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                        <div style="width: 40px; height: 40px; background: #E6FFF5; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                            <i class="fas fa-calendar-check" style="color: #00C48C;"></i>
+                                        </div>
+                                        <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Appointments</h4>
+                                        <span style="font-size: 11px; color: #6B7280;">2 upcoming</span>
+                                    </div>
+                                    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                        <div style="width: 40px; height: 40px; background: #F5E6FF; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                            <i class="fas fa-syringe" style="color: #8B5CF6;"></i>
+                                        </div>
+                                        <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Vaccinations</h4>
+                                        <span style="font-size: 11px; color: #6B7280;">8/10 complete</span>
+                                    </div>
+                                    <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                        <div style="width: 40px; height: 40px; background: #FFF0E6; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+                                            <i class="fas fa-hand-holding-heart" style="color: #FF6B35;"></i>
+                                        </div>
+                                        <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Benefits</h4>
+                                        <span style="font-size: 11px; color: #6B7280;">3 available</span>
+                                    </div>
+                                </div>
+
+                                <!-- Your Permissions -->
+                                <div style="background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <h3 style="font-size: 13px; color: #6B7280; margin-bottom: 12px;"><i class="fas fa-shield-halved" style="margin-right: 6px;"></i> Your Permissions</h3>
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: #D1FAE5; color: #065F46; padding: 6px 12px; border-radius: 20px; font-size: 11px;"><i class="fas fa-check"></i> View Records</span>
+                                        <span style="background: #D1FAE5; color: #065F46; padding: 6px 12px; border-radius: 20px; font-size: 11px;"><i class="fas fa-check"></i> Upload Records</span>
+                                        <span style="background: #D1FAE5; color: #065F46; padding: 6px 12px; border-radius: 20px; font-size: 11px;"><i class="fas fa-check"></i> Book Appointments</span>
+                                        <span style="background: #D1FAE5; color: #065F46; padding: 6px 12px; border-radius: 20px; font-size: 11px;"><i class="fas fa-check"></i> View Medications</span>
+                                        <span style="background: #FEE2E2; color: #991B1B; padding: 6px 12px; border-radius: 20px; font-size: 11px;"><i class="fas fa-times"></i> Financial Data</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guardian Screen 3: Book Appointment for Dependent -->
+            <div class="screen-wrapper">
+                <div class="screen-label">G3. Book Appointment (for Dependent)</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                            <div style="background: white; padding: 16px 20px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #E5E7EB;">
+                                <button style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; cursor: pointer;"><i class="fas fa-arrow-left"></i></button>
+                                <h2 style="font-size: 18px; font-weight: 700;">Book Appointment</h2>
+                            </div>
+                            
+                            <div style="padding: 20px;">
+                                <!-- Booking For -->
+                                <div style="background: #EEF2FF; border-radius: 12px; padding: 14px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+                                    <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <div>
+                                        <span style="font-size: 11px; color: #6B7280;">Booking for</span>
+                                        <h4 style="font-size: 15px; font-weight: 600;">Ahmad Jr.</h4>
+                                    </div>
+                                    <button style="margin-left: auto; background: white; border: 1px solid #E5E7EB; padding: 6px 12px; border-radius: 20px; font-size: 11px; cursor: pointer;">Change</button>
+                                </div>
+
+                                <!-- Appointment Type -->
+                                <label style="font-size: 13px; color: #6B7280; display: block; margin-bottom: 8px;">Appointment Type</label>
+                                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
+                                    <button style="background: #0066FF; color: white; border: none; padding: 14px; border-radius: 12px; font-size: 13px; font-weight: 600; cursor: pointer;"><i class="fas fa-syringe" style="margin-right: 6px;"></i> Vaccination</button>
+                                    <button style="background: white; border: 1px solid #E5E7EB; padding: 14px; border-radius: 12px; font-size: 13px; color: #1A1D26; cursor: pointer;"><i class="fas fa-stethoscope" style="margin-right: 6px;"></i> Checkup</button>
+                                </div>
+
+                                <!-- Vaccine Selection -->
+                                <label style="font-size: 13px; color: #6B7280; display: block; margin-bottom: 8px;">Select Vaccine</label>
+                                <select style="width: 100%; padding: 14px; border: 1px solid #E5E7EB; border-radius: 12px; font-size: 14px; margin-bottom: 20px; background: white;">
+                                    <option>HPV Dose 1 (Due)</option>
+                                    <option>Flu Shot</option>
+                                    <option>Other</option>
+                                </select>
+
+                                <!-- Location -->
+                                <label style="font-size: 13px; color: #6B7280; display: block; margin-bottom: 8px;">Select Location</label>
+                                <div style="background: white; border: 2px solid #0066FF; border-radius: 12px; padding: 14px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+                                    <div style="width: 40px; height: 40px; background: #E6F0FF; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-hospital" style="color: #0066FF;"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <h4 style="font-size: 14px; font-weight: 600;">Klinik Kesihatan SS2</h4>
+                                        <span style="font-size: 12px; color: #6B7280;">0.8 km away</span>
+                                    </div>
+                                    <i class="fas fa-check-circle" style="color: #0066FF; font-size: 20px;"></i>
+                                </div>
+
+                                <!-- Date & Time -->
+                                <label style="font-size: 13px; color: #6B7280; display: block; margin-bottom: 8px;">Select Date & Time</label>
+                                <div style="display: flex; gap: 10px; margin-bottom: 24px;">
+                                    <div style="flex: 1; background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 14px; text-align: center;">
+                                        <span style="font-size: 12px; color: #6B7280; display: block;">Date</span>
+                                        <strong style="font-size: 14px;">Dec 15, 2024</strong>
+                                    </div>
+                                    <div style="flex: 1; background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 14px; text-align: center;">
+                                        <span style="font-size: 12px; color: #6B7280; display: block;">Time</span>
+                                        <strong style="font-size: 14px;">10:00 AM</strong>
+                                    </div>
+                                </div>
+
+                                <button style="width: 100%; background: #0066FF; color: white; border: none; padding: 16px; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer;">
+                                    <i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Confirm Booking
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guardian Screen 4: Alerts & Notifications -->
+            <div class="screen-wrapper">
+                <div class="screen-label">G4. Guardian Alerts</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                            <div style="background: white; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #E5E7EB;">
+                                <h2 style="font-size: 18px; font-weight: 700;">Alerts & Reminders</h2>
+                                <button style="background: none; border: none; color: #0066FF; font-size: 13px; font-weight: 600; cursor: pointer;">Mark all read</button>
+                            </div>
+                            
+                            <div style="padding: 16px;">
+                                <!-- Emergency Alert -->
+                                <div style="background: #FEE2E2; border: 1px solid #FCA5A5; border-radius: 12px; padding: 14px; margin-bottom: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <div style="width: 36px; height: 36px; background: #DC2626; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                            <i class="fas fa-exclamation"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <span style="font-size: 10px; color: #991B1B; text-transform: uppercase; font-weight: 600;">URGENT</span>
+                                            <h4 style="font-size: 14px; font-weight: 600; color: #991B1B;">Medication Reminder</h4>
+                                        </div>
+                                        <span style="font-size: 11px; color: #6B7280;">5 min ago</span>
+                                    </div>
+                                    <p style="font-size: 13px; color: #7F1D1D; margin-left: 46px;">Adik Amir missed afternoon medication (Lisinopril 10mg)</p>
+                                    <div style="margin-left: 46px; margin-top: 10px;">
+                                        <button style="background: #DC2626; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; margin-right: 8px;">Call Amir</button>
+                                        <button style="background: white; border: 1px solid #FCA5A5; color: #DC2626; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer;">Mark Taken</button>
+                                    </div>
+                                </div>
+
+                                <!-- Appointment Reminder -->
+                                <div style="background: white; border-radius: 12px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <div style="width: 36px; height: 36px; background: #E6F0FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0066FF;">
+                                            <i class="fas fa-calendar"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 14px; font-weight: 600;">Appointment Tomorrow</h4>
+                                        </div>
+                                        <span style="font-size: 11px; color: #6B7280;">1h ago</span>
+                                    </div>
+                                    <p style="font-size: 13px; color: #6B7280; margin-left: 46px;">Ahmad Jr. - Vaccination at Klinik Kesihatan SS2, 10:00 AM</p>
+                                </div>
+
+                                <!-- Vaccination Due -->
+                                <div style="background: white; border-radius: 12px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <div style="width: 36px; height: 36px; background: #FEF3C7; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #D97706;">
+                                            <i class="fas fa-syringe"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 14px; font-weight: 600;">Vaccination Due</h4>
+                                        </div>
+                                        <span style="font-size: 11px; color: #6B7280;">2d ago</span>
+                                    </div>
+                                    <p style="font-size: 13px; color: #6B7280; margin-left: 46px;">Ahmad Jr. - HPV Dose 1 due this month</p>
+                                </div>
+
+                                <!-- Prescription Synced -->
+                                <div style="background: white; border-radius: 12px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <div style="width: 36px; height: 36px; background: #D1FAE5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #059669;">
+                                            <i class="fas fa-prescription"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 14px; font-weight: 600;">New Prescription</h4>
+                                        </div>
+                                        <span style="font-size: 11px; color: #6B7280;">3d ago</span>
+                                    </div>
+                                    <p style="font-size: 13px; color: #6B7280; margin-left: 46px;">Mak Minah - Dr. Sarah updated blood pressure medication</p>
+                                </div>
+
+                                <!-- Location Shared -->
+                                <div style="background: white; border-radius: 12px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <div style="width: 36px; height: 36px; background: #F5E6FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #8B5CF6;">
+                                            <i class="fas fa-location-dot"></i>
+                                        </div>
+                                        <div style="flex: 1;">
+                                            <h4 style="font-size: 14px; font-weight: 600;">Location Shared</h4>
+                                        </div>
+                                        <span style="font-size: 11px; color: #6B7280;">5d ago</span>
+                                    </div>
+                                    <p style="font-size: 13px; color: #6B7280; margin-left: 46px;">Adik Amir shared location - Near Guardian Pharmacy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guardian Screen 5: Permission Management -->
+            <div class="screen-wrapper">
+                <div class="screen-label">G5. Manage Permissions</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                            <div style="background: white; padding: 16px 20px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #E5E7EB;">
+                                <button style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; cursor: pointer;"><i class="fas fa-arrow-left"></i></button>
+                                <h2 style="font-size: 18px; font-weight: 700;">My Permissions</h2>
+                            </div>
+                            
+                            <div style="padding: 20px;">
+                                <div style="background: #EEF2FF; border-radius: 12px; padding: 14px; margin-bottom: 20px;">
+                                    <p style="font-size: 13px; color: #4F46E5;">
+                                        <i class="fas fa-info-circle" style="margin-right: 6px;"></i>
+                                        Permissions are granted by the dependent or their primary guardian.
+                                    </p>
+                                </div>
+
+                                <!-- Dependent Card -->
+                                <div style="background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #E5E7EB;">
+                                        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                                            <i class="fas fa-child"></i>
+                                        </div>
+                                        <div>
+                                            <h4 style="font-size: 15px; font-weight: 600;">Ahmad Jr.</h4>
+                                            <span style="font-size: 12px; color: #6B7280;">Child • Full Access</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Permission Toggles -->
+                                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px;"><i class="fas fa-file-medical" style="color: #0066FF; margin-right: 8px; width: 16px;"></i> View Health Records</span>
+                                            <div style="width: 44px; height: 24px; background: #0066FF; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px;"><i class="fas fa-cloud-arrow-up" style="color: #00C48C; margin-right: 8px; width: 16px;"></i> Upload Records</span>
+                                            <div style="width: 44px; height: 24px; background: #0066FF; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px;"><i class="fas fa-calendar-plus" style="color: #8B5CF6; margin-right: 8px; width: 16px;"></i> Manage Appointments</span>
+                                            <div style="width: 44px; height: 24px; background: #0066FF; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px;"><i class="fas fa-pills" style="color: #F59E0B; margin-right: 8px; width: 16px;"></i> View Medications</span>
+                                            <div style="width: 44px; height: 24px; background: #0066FF; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px;"><i class="fas fa-prescription" style="color: #10B981; margin-right: 8px; width: 16px;"></i> Renew Prescriptions</span>
+                                            <div style="width: 44px; height: 24px; background: #0066FF; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px; color: #9CA3AF;"><i class="fas fa-wallet" style="margin-right: 8px; width: 16px;"></i> Financial Data</span>
+                                            <div style="width: 44px; height: 24px; background: #E5E7EB; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; left: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                                            <span style="font-size: 14px; color: #9CA3AF;"><i class="fas fa-user-secret" style="margin-right: 8px; width: 16px;"></i> Sensitive Records</span>
+                                            <div style="width: 44px; height: 24px; background: #E5E7EB; border-radius: 12px; position: relative;">
+                                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; left: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p style="font-size: 12px; color: #6B7280; text-align: center;">
+                                    <i class="fas fa-lock" style="margin-right: 4px;"></i>
+                                    Contact the dependent to request additional permissions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guardian Screen 6: Emergency Received -->
+            <div class="screen-wrapper">
+                <div class="screen-label">G6. Emergency Alert Received</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen" style="background: linear-gradient(180deg, #DC2626 0%, #991B1B 100%);">
+                        <div class="status-bar light"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content" style="padding: 20px; color: white; display: flex; flex-direction: column; align-items: center; height: calc(100% - 44px);">
+                            <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; animation: pulse 1s infinite;">
+                                <i class="fas fa-bell" style="font-size: 36px;"></i>
+                            </div>
+                            <h1 style="font-size: 24px; font-weight: 800; letter-spacing: 1px; margin-bottom: 8px;">EMERGENCY ALERT</h1>
+                            <p style="font-size: 14px; opacity: 0.9; margin-bottom: 24px;">Ahmad Jr. activated emergency mode</p>
+                            
+                            <div style="background: rgba(255,255,255,0.15); border-radius: 16px; padding: 16px; width: 100%; margin-bottom: 16px;">
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                    <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-child" style="font-size: 20px;"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 16px; font-weight: 600;">Ahmad Jr.</h4>
+                                        <span style="font-size: 12px; opacity: 0.8;">8 years old • Your Dependent</span>
+                                    </div>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 12px;">
+                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                        <i class="fas fa-location-dot"></i>
+                                        <span style="font-size: 13px;">Location shared</span>
+                                    </div>
+                                    <p style="font-size: 14px; font-weight: 600;">Near Sekolah Kebangsaan SS2</p>
+                                    <span style="font-size: 12px; opacity: 0.8;">1.2 km from your location</span>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(255,255,255,0.15); border-radius: 16px; padding: 14px; width: 100%; margin-bottom: 20px;">
+                                <h4 style="font-size: 12px; opacity: 0.8; margin-bottom: 8px;">Health Info Auto-Shared</h4>
+                                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                    <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 11px;"><i class="fas fa-droplet"></i> A+</span>
+                                    <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 11px;"><i class="fas fa-check"></i> No Allergies</span>
+                                    <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px; font-size: 11px;"><i class="fas fa-pills"></i> No Meds</span>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 12px; width: 100%; margin-bottom: 16px;">
+                                <button style="flex: 1; background: white; border: none; padding: 16px; border-radius: 16px; color: #DC2626; font-size: 15px; font-weight: 700; cursor: pointer;">
+                                    <i class="fas fa-phone" style="margin-right: 6px;"></i> Call Ahmad Jr.
+                                </button>
+                            </div>
+
+                            <div style="display: flex; gap: 12px; width: 100%;">
+                                <button style="flex: 1; background: rgba(255,255,255,0.2); border: none; padding: 14px; border-radius: 12px; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">
+                                    <i class="fas fa-diamond-turn-right" style="margin-right: 6px;"></i> Navigate
+                                </button>
+                                <button style="flex: 1; background: rgba(255,255,255,0.2); border: none; padding: 14px; border-radius: 12px; color: white; font-size: 13px; font-weight: 600; cursor: pointer;">
+                                    <i class="fas fa-phone" style="margin-right: 6px;"></i> Call 999
+                                </button>
+                            </div>
+
+                            <button style="width: 100%; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; padding: 14px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: auto;">
+                                Emergency Resolved
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+    </style>
+    <script src="script.js"></script>
+    <script src="transitions.js"></script>
+</body>
+</html>
+

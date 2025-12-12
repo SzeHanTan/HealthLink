@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardianHealth - Guardian App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="index.html" class="guardian active"><i class="fas fa-user-shield"></i> Guardian App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+
+    <div class="screen-title">
+        <h1>Guardian App</h1>
+        <p>Manage dependents' health on their behalf</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; width: 100%; padding: 20px;">
+        
+        <a href="01-login.html" style="background: white; border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 12px;">
+                <i class="fas fa-right-to-bracket"></i>
+            </div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 4px;">1. Guardian Login</h3>
+            <p style="font-size: 13px; color: #6B7280;">Secure authentication</p>
+        </a>
+
+        <a href="02-dashboard.html" style="background: white; border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #818CF8, #6366F1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 12px;">
+                <i class="fas fa-house-user"></i>
+            </div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 4px;">2. Guardian Dashboard</h3>
+            <p style="font-size: 13px; color: #6B7280;">Manage all dependents</p>
+        </a>
+
+        <a href="03-dependent.html" style="background: white; border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #F59E0B, #D97706); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 12px;">
+                <i class="fas fa-user-check"></i>
+            </div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 4px;">3. Dependent Profile</h3>
+            <p style="font-size: 13px; color: #6B7280;">View & manage health info</p>
+        </a>
+
+        <a href="04-permissions.html" style="background: white; border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 12px;">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 4px;">4. Permissions</h3>
+            <p style="font-size: 13px; color: #6B7280;">Access control settings</p>
+        </a>
+
+        <a href="05-appointments.html" style="background: white; border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #FF6B35, #E85D2C); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 12px;">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 4px;">5. Book Appointments</h3>
+            <p style="font-size: 13px; color: #6B7280;">Schedule for dependents</p>
+        </a>
+
+        <a href="06-alerts.html" style="background: white; border-radius: 16px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #DC2626, #B91C1C); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 12px;">
+                <i class="fas fa-bell"></i>
+            </div>
+            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 4px;">6. Alerts & Notifications</h3>
+            <p style="font-size: 13px; color: #6B7280;">Emergency & reminders</p>
+        </a>
+
+    </div>
+
+    <style>
+        a[style*="background: white"]:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+    </style>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

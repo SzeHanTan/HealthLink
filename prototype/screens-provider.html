@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitizenHealth Smart ID - Healthcare Provider Screens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-part2.css">
+    <link rel="stylesheet" href="styles-part3.css">
+    <link rel="stylesheet" href="styles-part4.css">
+    <link rel="stylesheet" href="styles-provider.css">
+</head>
+<body>
+    <header class="prototype-header">
+        <div class="header-content">
+            <div class="logo"><i class="fas fa-id-card-clip"></i><span>CitizenHealth Smart ID</span></div>
+            <nav class="screen-nav">
+                <a href="all-screens.html" class="nav-btn"><i class="fas fa-user"></i> Citizen Screens 1-6</a>
+                <a href="screens-part2.html" class="nav-btn"><i class="fas fa-user"></i> Citizen Screens 7-12</a>
+                <a href="screens-guardian.html" class="nav-btn"><i class="fas fa-user-shield"></i> Guardian App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="prototype-container">
+        <div class="section-header provider-section" id="provider-section">
+            <h1><i class="fas fa-hospital-user"></i> Healthcare Provider Screens</h1>
+            <p>Clinic & Pharmacy workflow interfaces (Tablet view)</p>
+        </div>
+
+        <div class="screens-grid provider-screens">
+            <!-- Screen 13: Provider Check-In -->
+            <div class="screen-wrapper">
+                <div class="screen-label">13. Smart ID Check-In (Provider)</div>
+                <div class="phone-frame tablet-frame"><div class="tablet-camera"></div>
+                    <div class="phone-screen tablet-screen">
+                        <div class="provider-header"><div class="clinic-logo"><i class="fas fa-hospital"></i><span>Klinik Kesihatan SS2</span></div><div class="provider-nav"><button class="prov-nav-btn active"><i class="fas fa-qrcode"></i> Check-In</button><button class="prov-nav-btn"><i class="fas fa-users"></i> Queue</button><button class="prov-nav-btn"><i class="fas fa-clipboard-list"></i> Records</button></div><div class="staff-info"><span>Dr. Sarah Ahmad</span><div class="staff-avatar"><i class="fas fa-user-doctor"></i></div></div></div>
+                        <div class="provider-content">
+                            <div class="checkin-panel">
+                                <div class="scan-area"><div class="scan-frame"><div class="scan-corners"><span></span><span></span><span></span><span></span></div><div class="scan-icon"><i class="fas fa-qrcode"></i></div><div class="scan-line"></div></div><p class="scan-instruction">Scan Patient's Smart ID QR Code</p><div class="scan-options"><button class="scan-option active"><i class="fas fa-qrcode"></i> QR Scan</button><button class="scan-option"><i class="fas fa-wifi"></i> NFC Tap</button><button class="scan-option"><i class="fas fa-keyboard"></i> Manual ID</button></div></div>
+                                <div class="recent-checkins"><h3>Recent Check-Ins</h3><div class="checkin-item"><div class="patient-avatar"><i class="fas fa-user"></i></div><div class="patient-quick-info"><span class="patient-name">Ahmad Razif</span><span class="patient-id">CH-2024-889912</span></div><span class="checkin-time">9:30 AM</span><span class="checkin-status waiting">Waiting</span></div><div class="checkin-item"><div class="patient-avatar"><i class="fas fa-user"></i></div><div class="patient-quick-info"><span class="patient-name">Mei Ling Tan</span><span class="patient-id">CH-2024-776543</span></div><span class="checkin-time">9:15 AM</span><span class="checkin-status in-progress">In Progress</span></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 14: Patient Info (After Scan) -->
+            <div class="screen-wrapper">
+                <div class="screen-label">14. Patient Info (After Scan)</div>
+                <div class="phone-frame tablet-frame"><div class="tablet-camera"></div>
+                    <div class="phone-screen tablet-screen">
+                        <div class="provider-header"><div class="clinic-logo"><i class="fas fa-hospital"></i><span>Klinik Kesihatan SS2</span></div><div class="provider-nav"><button class="prov-nav-btn"><i class="fas fa-qrcode"></i> Check-In</button><button class="prov-nav-btn"><i class="fas fa-users"></i> Queue</button><button class="prov-nav-btn active"><i class="fas fa-clipboard-list"></i> Records</button></div><div class="staff-info"><span>Dr. Sarah Ahmad</span><div class="staff-avatar"><i class="fas fa-user-doctor"></i></div></div></div>
+                        <div class="provider-content patient-view">
+                            <div class="patient-header-card"><div class="patient-photo"><i class="fas fa-user"></i></div><div class="patient-main-info"><h2>Ahmad Razif bin Abdullah</h2><div class="patient-meta"><span><i class="fas fa-id-card"></i> CH-2024-889912</span><span><i class="fas fa-cake-candles"></i> 45 years old</span><span><i class="fas fa-venus-mars"></i> Male</span></div></div><div class="patient-critical"><div class="critical-item blood"><i class="fas fa-droplet"></i><span>O+</span></div><div class="critical-item allergy"><i class="fas fa-triangle-exclamation"></i><span>Penicillin</span></div></div></div>
+                            <div class="patient-tabs"><button class="patient-tab active">Summary</button><button class="patient-tab">History</button><button class="patient-tab">Medications</button><button class="patient-tab">Lab Results</button></div>
+                            <div class="patient-summary"><div class="summary-grid"><div class="summary-card conditions"><h4><i class="fas fa-heart-pulse"></i> Conditions</h4><ul><li>Type 2 Diabetes</li><li>Hypertension</li></ul></div><div class="summary-card medications"><h4><i class="fas fa-pills"></i> Current Medications</h4><ul><li>Metformin 500mg (2x daily)</li><li>Lisinopril 10mg (1x daily)</li><li>Atorvastatin 20mg (1x night)</li></ul></div><div class="summary-card visits"><h4><i class="fas fa-calendar-check"></i> Last Visit</h4><p>10 Nov 2024 - General Checkup</p><p class="visit-notes">BP: 130/85, Weight: 72kg</p></div><div class="summary-card vaccinations"><h4><i class="fas fa-syringe"></i> Vaccinations</h4><p>COVID-19: 4 doses ✓</p><p>Flu: Oct 2024 ✓</p></div></div></div>
+                            <div class="provider-actions"><button class="prov-action-btn primary"><i class="fas fa-notes-medical"></i> Start Consultation</button><button class="prov-action-btn"><i class="fas fa-prescription"></i> New Prescription</button><button class="prov-action-btn"><i class="fas fa-flask"></i> Order Lab Test</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 15: NFC Wristband Management -->
+            <div class="screen-wrapper">
+                <div class="screen-label">15. NFC Wristband / Tag Management</div>
+                <div class="phone-frame tablet-frame"><div class="tablet-camera"></div>
+                    <div class="phone-screen tablet-screen">
+                        <div class="provider-header"><div class="clinic-logo"><i class="fas fa-hospital"></i><span>Hospital Kuala Lumpur</span></div><div class="provider-nav"><button class="prov-nav-btn"><i class="fas fa-bed"></i> Patients</button><button class="prov-nav-btn active"><i class="fas fa-wifi"></i> NFC Tags</button><button class="prov-nav-btn"><i class="fas fa-chart-line"></i> Tracking</button></div><div class="staff-info"><span>Nurse Fatimah</span><div class="staff-avatar"><i class="fas fa-user-nurse"></i></div></div></div>
+                        <div class="provider-content nfc-content">
+                            <div class="nfc-header-panel"><div class="nfc-big-icon"><i class="fas fa-wifi"></i></div><div class="nfc-header-text"><h2>NFC Patient Tracking</h2><p>Tap wristband to patient device</p></div><div class="nfc-stats"><div class="nfc-stat"><span class="stat-num">24</span><span class="stat-label">Active Tags</span></div><div class="nfc-stat"><span class="stat-num">3</span><span class="stat-label">Pending</span></div></div></div>
+                            <div class="nfc-features"><div class="nfc-feature-card"><i class="fas fa-id-badge"></i><h4>Patient ID</h4><p>Fast identification</p></div><div class="nfc-feature-card"><i class="fas fa-clipboard-check"></i><h4>Treatment Log</h4><p>Track procedures</p></div><div class="nfc-feature-card"><i class="fas fa-pills"></i><h4>Medication</h4><p>Admin tracking</p></div><div class="nfc-feature-card"><i class="fas fa-door-open"></i><h4>Access Control</h4><p>Secure areas</p></div></div>
+                            <div class="nfc-patients-list"><h3>Tagged Patients</h3><div class="nfc-patient"><div class="nfc-patient-band"><i class="fas fa-tag"></i><span>Ward A-12</span></div><div class="nfc-patient-info"><h4>Ahmad Razif</h4><span>Tag: NFC-HKL-2024-001</span></div><div class="nfc-patient-status active"><i class="fas fa-signal"></i> Active</div><button class="nfc-action"><i class="fas fa-eye"></i></button></div><div class="nfc-patient"><div class="nfc-patient-band child"><i class="fas fa-tag"></i><span>Pediatric B-5</span></div><div class="nfc-patient-info"><h4>Ahmad Jr. (Minor)</h4><span>Tag: NFC-HKL-2024-002</span><span class="guardian-alert"><i class="fas fa-user-shield"></i> Guardian: Ahmad Razif</span></div><div class="nfc-patient-status active"><i class="fas fa-signal"></i> Active</div><button class="nfc-action"><i class="fas fa-eye"></i></button></div></div>
+                            <div class="nfc-bottom-actions"><button class="nfc-main-btn"><i class="fas fa-plus-circle"></i> Assign New Tag</button><button class="nfc-secondary-btn"><i class="fas fa-history"></i> View Activity Log</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screen 16: Prescription Update -->
+            <div class="screen-wrapper">
+                <div class="screen-label">16. Prescription Update (Sync to Citizen)</div>
+                <div class="phone-frame tablet-frame"><div class="tablet-camera"></div>
+                    <div class="phone-screen tablet-screen">
+                        <div class="provider-header"><div class="clinic-logo"><i class="fas fa-hospital"></i><span>Klinik Kesihatan SS2</span></div><div class="provider-nav"><button class="prov-nav-btn"><i class="fas fa-qrcode"></i> Check-In</button><button class="prov-nav-btn"><i class="fas fa-users"></i> Queue</button><button class="prov-nav-btn active"><i class="fas fa-prescription"></i> Prescribe</button></div><div class="staff-info"><span>Dr. Sarah Ahmad</span><div class="staff-avatar"><i class="fas fa-user-doctor"></i></div></div></div>
+                        <div class="provider-content prescription-content">
+                            <div class="prescription-header"><div class="rx-icon"><i class="fas fa-prescription"></i></div><div class="rx-patient"><h3>New Prescription for</h3><h2>Ahmad Razif bin Abdullah</h2><span>CH-2024-889912</span></div></div>
+                            <div class="prescription-form"><div class="med-entry"><div class="med-search"><i class="fas fa-search"></i><input type="text" placeholder="Search medication..." value="Metformin"></div></div><div class="prescription-items"><div class="rx-item"><div class="rx-item-header"><h4>Metformin 500mg</h4><button class="remove-rx"><i class="fas fa-times"></i></button></div><div class="rx-item-details"><div class="rx-field"><label>Dosage</label><select><option>1 tablet</option><option selected>2 tablets</option></select></div><div class="rx-field"><label>Frequency</label><select><option>Once daily</option><option selected>Twice daily</option></select></div><div class="rx-field"><label>Duration</label><select><option>7 days</option><option>14 days</option><option selected>30 days</option></select></div></div><div class="rx-instructions"><label>Instructions</label><input type="text" value="Take after meals"></div></div></div><button class="add-med-btn"><i class="fas fa-plus"></i> Add Another Medication</button></div>
+                            <div class="sync-notice"><i class="fas fa-sync"></i><div class="sync-text"><strong>Auto-Sync Enabled</strong><p>Prescription will sync to patient's app & guardian</p></div></div>
+                            <div class="prescription-actions"><button class="rx-action-btn secondary"><i class="fas fa-save"></i> Save Draft</button><button class="rx-action-btn primary"><i class="fas fa-paper-plane"></i> Submit & Sync</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="transitions.js"></script>
+</body>
+</html>

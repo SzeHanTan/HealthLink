@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Map - CitizenHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>10. Emergency Map</h1><p>Real-time nearby healthcare facilities</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar light" style="position: absolute; z-index: 10; color: #1A1D26;"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="position: relative; height: 100%; padding: 0;">
+                    <!-- Mock Map Background -->
+                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #C8E6C9 0%, #E8F5E9 50%, #DCEDC8 100%);">
+                        <svg width="100%" height="100%" viewBox="0 0 400 800" preserveAspectRatio="xMidYMid slice">
+                            <line x1="0" y1="200" x2="400" y2="200" stroke="#AED581" stroke-width="12"/>
+                            <line x1="0" y1="400" x2="400" y2="400" stroke="#AED581" stroke-width="16"/>
+                            <line x1="0" y1="600" x2="400" y2="600" stroke="#AED581" stroke-width="8"/>
+                            <line x1="100" y1="0" x2="100" y2="800" stroke="#AED581" stroke-width="10"/>
+                            <line x1="200" y1="0" x2="200" y2="800" stroke="#AED581" stroke-width="14"/>
+                            <line x1="300" y1="0" x2="300" y2="800" stroke="#AED581" stroke-width="8"/>
+                        </svg>
+                    </div>
+                    <!-- Map Pins -->
+                    <div style="position: absolute; top: 200px; left: 100px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 48px; height: 48px; background: #0066FF; border-radius: 50% 50% 0 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,102,255,0.4);">
+                            <i class="fas fa-hospital" style="transform: rotate(-45deg); color: white; font-size: 18px;"></i>
+                        </div>
+                        <span style="margin-top: 8px; font-size: 10px; font-weight: 600; background: white; padding: 4px 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">2.3 km</span>
+                    </div>
+                    <div style="position: absolute; top: 300px; right: 50px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 40px; height: 40px; background: #00C48C; border-radius: 50% 50% 0 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,196,140,0.4);">
+                            <i class="fas fa-house-medical" style="transform: rotate(-45deg); color: white; font-size: 14px;"></i>
+                        </div>
+                        <span style="margin-top: 8px; font-size: 10px; font-weight: 600; background: white; padding: 4px 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">1.2 km</span>
+                    </div>
+                    <div style="position: absolute; top: 420px; left: 60px; display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 40px; height: 40px; background: #8B5CF6; border-radius: 50% 50% 0 50%; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(139,92,246,0.4);">
+                            <i class="fas fa-prescription-bottle" style="transform: rotate(-45deg); color: white; font-size: 14px;"></i>
+                        </div>
+                        <span style="margin-top: 8px; font-size: 10px; font-weight: 600; background: white; padding: 4px 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">0.8 km</span>
+                    </div>
+                    <!-- User Location -->
+                    <div class="pulse-ring" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: #0066FF; border: 4px solid white; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3);"></div>
+                    <!-- Top Search -->
+                    <div style="position: absolute; top: 50px; left: 16px; right: 16px;">
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <!-- Back Button -->
+                            <a href="03-dashboard.html" class="clickable" style="width: 44px; height: 44px; background: white; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.15); text-decoration: none; color: #1A1D26; flex-shrink: 0;">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                            <!-- Search Bar -->
+                            <div style="flex: 1; background: white; border-radius: 16px; padding: 12px 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-search" style="color: #6B7280;"></i>
+                                <input type="text" placeholder="Search clinics, hospitals..." style="border: none; outline: none; flex: 1; font-size: 14px;">
+                                <button style="width: 32px; height: 32px; background: #F5F7FA; border: none; border-radius: 8px; color: #6B7280;"><i class="fas fa-sliders"></i></button>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 8px; margin-top: 12px; overflow-x: auto;">
+                            <button style="background: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 6px;"><i class="fas fa-hospital" style="color: #0066FF;"></i> Hospitals</button>
+                            <button style="background: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 6px;"><i class="fas fa-house-medical" style="color: #00C48C;"></i> Clinics</button>
+                            <button style="background: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 6px;"><i class="fas fa-prescription-bottle" style="color: #8B5CF6;"></i> Pharmacy</button>
+                        </div>
+                    </div>
+                    <!-- Bottom Card -->
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: white; border-radius: 24px 24px 0 0; padding: 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1);">
+                        <div style="width: 40px; height: 4px; background: #E5E7EB; border-radius: 2px; margin: 0 auto 16px;"></div>
+                        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+                            <div style="width: 52px; height: 52px; background: #E6F0FF; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: #0066FF; font-size: 22px;"><i class="fas fa-hospital"></i></div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 2px;">Hospital Kuala Lumpur</h4>
+                                <p style="font-size: 12px; color: #6B7280;">2.3 km • Open 24/7</p>
+                                <div style="display: flex; gap: 4px; margin-top: 4px;">
+                                    <i class="fas fa-star" style="color: #FFB800; font-size: 11px;"></i>
+                                    <i class="fas fa-star" style="color: #FFB800; font-size: 11px;"></i>
+                                    <i class="fas fa-star" style="color: #FFB800; font-size: 11px;"></i>
+                                    <i class="fas fa-star" style="color: #FFB800; font-size: 11px;"></i>
+                                    <i class="fas fa-star-half-stroke" style="color: #FFB800; font-size: 11px;"></i>
+                                    <span style="font-size: 11px; color: #6B7280; margin-left: 4px;">4.5</span>
+                                </div>
+                            </div>
+                            <a href="06-appointments.html" style="width: 44px; height: 44px; background: #0066FF; border: none; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none;"><i class="fas fa-directions"></i></a>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button style="flex: 1; background: #F5F7FA; border: none; padding: 12px; border-radius: 12px; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; color: #1A1D26;"><i class="fas fa-phone"></i> Call</button>
+                            <button style="flex: 1; background: #0066FF; border: none; padding: 12px; border-radius: 12px; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; color: white;"><i class="fas fa-calendar-plus"></i> Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="09-emergency.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">10 / 12</span>
+            <a href="11-chatbot.html" class="nav-btn next">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-signup.html">1</a><a href="02-role.html">2</a><a href="03-dashboard.html">3</a><a href="04-records.html">4</a><a href="05-medications.html">5</a><a href="06-appointments.html">6</a><a href="07-benefits.html">7</a><a href="08-guardians.html">8</a><a href="09-emergency.html">9</a><a href="10-map.html" class="active">10</a><a href="11-chatbot.html">11</a><a href="12-child.html">12</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

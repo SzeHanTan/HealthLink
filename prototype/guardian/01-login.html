@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Login - GuardianHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>.screen-list a.active { background: var(--guardian); }</style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="index.html" class="guardian active"><i class="fas fa-user-shield"></i> Guardian App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>1. Guardian Login</h1><p>Secure authentication for guardians</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="display: flex; flex-direction: column; background: linear-gradient(180deg, #EEF2FF 0%, #E0E7FF 100%); padding: 40px 24px 24px;">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 36px; color: white; box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h1 style="font-size: 28px; font-weight: 800; color: #1A1D26; margin-bottom: 4px;">GuardianHealth</h1>
+                        <p style="color: #6B7280; font-size: 14px;">Care for your loved ones</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="margin-bottom: 16px;">
+                            <label style="font-size: 13px; font-weight: 600; color: #374151; display: block; margin-bottom: 6px;">Smart ID / IC Number</label>
+                            <div style="display: flex; align-items: center; gap: 12px; background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 14px 16px;">
+                                <i class="fas fa-id-card" style="color: #9CA3AF;"></i>
+                                <input type="text" placeholder="Enter your ID" value="920515-14-5678" style="border: none; outline: none; flex: 1; font-size: 15px;">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 24px;">
+                            <label style="font-size: 13px; font-weight: 600; color: #374151; display: block; margin-bottom: 6px;">PIN / Biometric</label>
+                            <div style="display: flex; align-items: center; gap: 12px; background: white; border: 1px solid #E5E7EB; border-radius: 12px; padding: 14px 16px;">
+                                <i class="fas fa-lock" style="color: #9CA3AF;"></i>
+                                <input type="password" placeholder="Enter PIN" value="••••••" style="border: none; outline: none; flex: 1; font-size: 15px;">
+                                <i class="fas fa-fingerprint" style="color: #4F46E5; font-size: 22px;"></i>
+                            </div>
+                        </div>
+                        <a href="02-dashboard.html" class="clickable" style="width: 100%; background: linear-gradient(135deg, #4F46E5, #7C3AED); color: white; border: none; padding: 16px; border-radius: 16px; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px; text-decoration: none;">
+                            <i class="fas fa-right-to-bracket"></i> Login as Guardian
+                        </a>
+                        <button class="clickable" style="width: 100%; background: white; color: #4F46E5; border: 2px solid #4F46E5; padding: 16px; border-radius: 16px; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-wifi"></i> NFC / QR Login
+                        </button>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 24px; text-align: center;">
+                        <p style="font-size: 12px; color: #6B7280; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-shield-check" style="color: #10B981;"></i> Protected by 2-Factor Authentication
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="index.html" class="nav-btn prev"><i class="fas fa-th-large"></i> All Screens</a>
+            <span class="screen-indicator">1 / 6</span>
+            <a href="02-dashboard.html" class="nav-btn next" style="background: var(--guardian);">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list">
+            <a href="01-login.html" class="active">1</a>
+            <a href="02-dashboard.html">2</a>
+            <a href="03-dependent.html">3</a>
+            <a href="04-permissions.html">4</a>
+            <a href="05-appointments.html">5</a>
+            <a href="06-alerts.html">6</a>
+        </div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

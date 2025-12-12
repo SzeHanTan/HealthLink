@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Dashboard - GuardianHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>.screen-list a.active { background: var(--guardian); }</style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="index.html" class="guardian active"><i class="fas fa-user-shield"></i> Guardian App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>2. Guardian Dashboard</h1><p>Manage all your dependents in one place</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #F5F7FA; padding: 0 0 80px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 20px 16px; background: linear-gradient(135deg, #4F46E5, #7C3AED); color: white;">
+                        <div>
+                            <span style="font-size: 12px; opacity: 0.8; display: block;">Welcome, Guardian</span>
+                            <h2 style="font-size: 20px; font-weight: 700;">Siti Aminah</h2>
+                        </div>
+                        <a href="06-alerts.html" style="width: 44px; height: 44px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; font-size: 18px; display: flex; align-items: center; justify-content: center; position: relative; text-decoration: none;">
+                            <i class="fas fa-bell"></i>
+                            <span style="position: absolute; top: 8px; right: 8px; width: 10px; height: 10px; background: #FF3B30; border-radius: 50%; border: 2px solid #4F46E5;"></span>
+                        </a>
+                    </div>
+                    <div style="margin: -20px 16px 20px; background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 14px; font-weight: 600;">My Dependents</span>
+                            <span style="font-size: 12px; color: #4F46E5; font-weight: 600;">3 people</span>
+                        </div>
+                        <div style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px;">
+                            <a href="03-dependent.html" class="clickable" style="min-width: 100px; background: linear-gradient(135deg, #FEF3C7, #FDE68A); border-radius: 16px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;"><i class="fas fa-child"></i></div>
+                                <span style="font-size: 13px; font-weight: 600;">Ahmad Jr.</span>
+                                <span style="font-size: 11px; color: #92400E;">Child</span>
+                            </a>
+                            <a href="03-dependent.html" class="clickable" style="min-width: 100px; background: linear-gradient(135deg, #DBEAFE, #BFDBFE); border-radius: 16px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #3B82F6, #2563EB); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;"><i class="fas fa-user"></i></div>
+                                <span style="font-size: 13px; font-weight: 600;">Ahmad</span>
+                                <span style="font-size: 11px; color: #1E40AF;">Spouse</span>
+                            </a>
+                            <a href="03-dependent.html" class="clickable" style="min-width: 100px; background: linear-gradient(135deg, #FCE7F3, #FBCFE8); border-radius: 16px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #EC4899, #DB2777); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;"><i class="fas fa-person-cane"></i></div>
+                                <span style="font-size: 13px; font-weight: 600;">Mak Jah</span>
+                                <span style="font-size: 11px; color: #9D174D;">Elderly</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="padding: 0 16px;">
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">Attention Required</h3>
+                        <div class="clickable" style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <div style="width: 44px; height: 44px; background: #FEE2E2; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-syringe" style="color: #DC2626;"></i></div>
+                            <div style="flex: 1;">
+                                <span style="font-size: 14px; font-weight: 600; color: #991B1B;">Vaccination Due</span>
+                                <span style="font-size: 12px; color: #B91C1C; display: block;">Ahmad Jr. - HPV dose 1</span>
+                            </div>
+                            <a href="05-appointments.html" style="background: #DC2626; color: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; text-decoration: none;">Book</a>
+                        </div>
+                        <div class="clickable" style="background: #FEF3C7; border: 1px solid #FDE68A; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <div style="width: 44px; height: 44px; background: #FEF3C7; border-radius: 12px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-pills" style="color: #D97706;"></i></div>
+                            <div style="flex: 1;">
+                                <span style="font-size: 14px; font-weight: 600; color: #92400E;">Medication Refill</span>
+                                <span style="font-size: 12px; color: #B45309; display: block;">Mak Jah - Metformin (3 days left)</span>
+                            </div>
+                            <button style="background: #D97706; color: white; border: none; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;">Order</button>
+                        </div>
+                    </div>
+                    <div style="padding: 16px;">
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">Upcoming</h3>
+                        <div class="clickable" style="background: white; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 10px;">
+                            <div style="width: 48px; text-align: center; padding: 8px; background: #EEF2FF; border-radius: 10px;"><span style="display: block; font-size: 18px; font-weight: 700; color: #4F46E5;">11</span><span style="font-size: 10px; color: #4F46E5;">DEC</span></div>
+                            <div style="flex: 1;">
+                                <span style="font-size: 14px; font-weight: 600;">Ahmad - Checkup</span>
+                                <span style="font-size: 12px; color: #6B7280; display: block;">10:00 AM • KK SS2</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #9CA3AF;"></i>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                            <div style="width: 48px; text-align: center; padding: 8px; background: #EEF2FF; border-radius: 10px;"><span style="display: block; font-size: 18px; font-weight: 700; color: #4F46E5;">15</span><span style="font-size: 10px; color: #4F46E5;">DEC</span></div>
+                            <div style="flex: 1;">
+                                <span style="font-size: 14px; font-weight: 600;">Mak Jah - Diabetes Review</span>
+                                <span style="font-size: 12px; color: #6B7280; display: block;">2:30 PM • Hospital KL</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #9CA3AF;"></i>
+                        </div>
+                    </div>
+                    <!-- Bottom Nav -->
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 8px 0 24px; border-top: 1px solid #E5E7EB;">
+                        <a href="02-dashboard.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #4F46E5; font-size: 10px; text-decoration: none; padding: 8px 12px;"><i class="fas fa-house" style="font-size: 20px;"></i><span>Home</span></a>
+                        <a href="03-dependent.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #9CA3AF; font-size: 10px; text-decoration: none; padding: 8px 12px;"><i class="fas fa-users" style="font-size: 20px;"></i><span>Dependents</span></a>
+                        <a href="05-appointments.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #9CA3AF; font-size: 10px; text-decoration: none; padding: 8px 12px;"><i class="fas fa-calendar" style="font-size: 20px;"></i><span>Schedule</span></a>
+                        <a href="06-alerts.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; color: #9CA3AF; font-size: 10px; text-decoration: none; padding: 8px 12px;"><i class="fas fa-bell" style="font-size: 20px;"></i><span>Alerts</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="01-login.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">2 / 6</span>
+            <a href="03-dependent.html" class="nav-btn next" style="background: var(--guardian);">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-login.html">1</a><a href="02-dashboard.html" class="active">2</a><a href="03-dependent.html">3</a><a href="04-permissions.html">4</a><a href="05-appointments.html">5</a><a href="06-alerts.html">6</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

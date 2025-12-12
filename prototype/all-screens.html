@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CitizenHealth Smart ID - All Screens Prototype</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-part2.css">
+    <link rel="stylesheet" href="styles-part3.css">
+    <link rel="stylesheet" href="styles-part4.css">
+    <link rel="stylesheet" href="styles-provider.css">
+</head>
+<body>
+    <header class="prototype-header">
+        <div class="header-content">
+            <div class="logo"><i class="fas fa-id-card-clip"></i><span>CitizenHealth Smart ID</span></div>
+            <nav class="screen-nav">
+                <button class="nav-btn active" data-section="citizen"><i class="fas fa-user"></i> Citizen App</button>
+                <a href="screens-guardian.html" class="nav-btn"><i class="fas fa-user-shield"></i> Guardian App</a>
+                <a href="screens-provider.html" class="nav-btn"><i class="fas fa-hospital"></i> Healthcare Provider</a>
+            </nav>
+            <div class="lang-selector">
+                <button class="lang-btn active">EN</button>
+                <button class="lang-btn">BM</button>
+                <button class="lang-btn">中文</button>
+                <button class="lang-btn">தமிழ்</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="prototype-container">
+        <div class="section-header" id="citizen-section">
+            <h1><i class="fas fa-mobile-screen"></i> Citizen App Screens</h1>
+            <p>Complete user experience flow for citizens, guardians, elderly, children and PWDs</p>
+        </div>
+
+        <div class="screens-grid">
+            <!-- SCREEN 1: Sign Up -->
+            <div class="screen-wrapper">
+                <div class="screen-label">1. Sign Up / Onboarding</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content signup-content">
+                            <div class="signup-hero"><div class="hero-icon"><i class="fas fa-shield-heart"></i></div><h1>CitizenHealth</h1><p class="tagline">Your Smart Health Identity</p></div>
+                            <div class="verification-options"><h3>Verify Your Identity</h3>
+                                <button class="verify-btn mykad"><div class="btn-icon"><i class="fas fa-id-card"></i></div><div class="btn-text"><span class="btn-title">MyKad Verification</span><span class="btn-subtitle">Scan your IC number</span></div><i class="fas fa-chevron-right"></i></button>
+                                <button class="verify-btn qr"><div class="btn-icon"><i class="fas fa-qrcode"></i></div><div class="btn-text"><span class="btn-title">QR Code Scan</span><span class="btn-subtitle">Quick registration</span></div><i class="fas fa-chevron-right"></i></button>
+                                <button class="verify-btn nfc"><div class="btn-icon"><i class="fas fa-wifi"></i></div><div class="btn-text"><span class="btn-title">NFC Tap</span><span class="btn-subtitle">Tap your Smart Card</span></div><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="signup-footer"><p class="secure-note"><i class="fas fa-lock"></i> Secured with end-to-end encryption</p><p class="time-note"><i class="fas fa-clock"></i> Setup completes in under 1 minute</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 2: Role Selection -->
+            <div class="screen-wrapper">
+                <div class="screen-label">2. Role Detection</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content role-content">
+                            <div class="back-header"><button class="back-btn"><i class="fas fa-arrow-left"></i></button><span>Profile Setup</span></div>
+                            <div class="role-hero"><div class="success-check"><i class="fas fa-check-circle"></i></div><h2>Identity Verified!</h2><p>Smart ID: <strong>CH-2024-889912</strong></p></div>
+                            <div class="role-selection"><h3>Select Your Profile Type</h3>
+                                <div class="role-grid"><button class="role-card active"><i class="fas fa-user"></i><span>Adult</span></button><button class="role-card"><i class="fas fa-child"></i><span>Child</span><small>Link to parent</small></button><button class="role-card"><i class="fas fa-person-cane"></i><span>Elderly</span></button><button class="role-card"><i class="fas fa-wheelchair"></i><span>PWD</span></button></div>
+                            </div>
+                            <div class="accessibility-toggle"><label class="toggle-row"><span><i class="fas fa-universal-access"></i> Enable Accessibility Mode</span><div class="toggle active"></div></label><label class="toggle-row"><span><i class="fas fa-volume-high"></i> Voice Assistance</span><div class="toggle"></div></label></div>
+                            <button class="primary-btn">Continue <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 3: Dashboard -->
+            <div class="screen-wrapper">
+                <div class="screen-label">3. Dashboard</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content dashboard-content">
+                            <div class="dashboard-header"><div class="user-greeting"><div class="avatar"><i class="fas fa-user"></i></div><div class="greeting-text"><span class="greeting">Good Morning</span><h2>Ahmad Razif</h2></div></div><button class="emergency-btn pulse"><i class="fas fa-heart-pulse"></i></button></div>
+                            <div class="smart-id-card"><div class="id-card-header"><span class="id-label">CitizenHealth Smart ID</span><div class="qr-mini"><i class="fas fa-qrcode"></i></div></div><div class="id-number">CH-2024-889912</div><div class="id-card-footer"><span><i class="fas fa-droplet"></i> O+</span><span><i class="fas fa-triangle-exclamation"></i> Penicillin</span></div></div>
+                            <div class="quick-actions"><div class="action-grid"><button class="action-card health"><div class="action-icon"><i class="fas fa-file-medical"></i></div><span>Health Records</span></button><button class="action-card meds"><div class="action-icon"><i class="fas fa-pills"></i></div><span>Medications</span></button><button class="action-card appointments"><div class="action-icon"><i class="fas fa-calendar-check"></i></div><span>Appointments</span></button><button class="action-card benefits"><div class="action-icon"><i class="fas fa-hand-holding-heart"></i></div><span>Benefits</span></button></div></div>
+                            <div class="upcoming-section"><h3>Upcoming</h3><div class="upcoming-card"><div class="upcoming-icon"><i class="fas fa-stethoscope"></i></div><div class="upcoming-info"><span class="upcoming-title">Dr. Sarah - Checkup</span><span class="upcoming-time">Tomorrow, 10:00 AM</span></div><i class="fas fa-chevron-right"></i></div></div>
+                            <div class="bottom-nav"><button class="nav-item active"><i class="fas fa-house"></i><span>Home</span></button><button class="nav-item"><i class="fas fa-users"></i><span>Guardians</span></button><button class="nav-item chat-nav"><i class="fas fa-robot"></i></button><button class="nav-item"><i class="fas fa-map-location-dot"></i><span>Nearby</span></button><button class="nav-item"><i class="fas fa-gear"></i><span>Settings</span></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 4: Health Records -->
+            <div class="screen-wrapper">
+                <div class="screen-label">4. My Health Records</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content records-content">
+                            <div class="page-header"><button class="back-btn"><i class="fas fa-arrow-left"></i></button><h2>My Health Records</h2><button class="add-btn"><i class="fas fa-plus"></i></button></div>
+                            <div class="sync-banner"><i class="fas fa-cloud-arrow-down"></i><span>Last synced: 2 hours ago</span><button class="sync-btn">Sync</button></div>
+                            <div class="records-tabs"><button class="tab active">All</button><button class="tab">Vaccinations</button><button class="tab">Visits</button><button class="tab">Labs</button></div>
+                            <div class="records-list">
+                                <div class="record-card vaccination"><div class="record-icon"><i class="fas fa-syringe"></i></div><div class="record-info"><span class="record-type">Vaccination</span><h4>COVID-19 Booster</h4><span class="record-date">15 Nov 2024 • KKM</span></div><i class="fas fa-chevron-right"></i></div>
+                                <div class="record-card visit"><div class="record-icon"><i class="fas fa-hospital"></i></div><div class="record-info"><span class="record-type">Hospital Visit</span><h4>General Checkup</h4><span class="record-date">10 Nov 2024 • PPUM</span></div><i class="fas fa-chevron-right"></i></div>
+                                <div class="record-card lab"><div class="record-icon"><i class="fas fa-flask"></i></div><div class="record-info"><span class="record-type">Lab Result</span><h4>Blood Test - CBC</h4><span class="record-date">8 Nov 2024 • PathLab</span></div><i class="fas fa-chevron-right"></i></div>
+                                <div class="record-card prescription"><div class="record-icon"><i class="fas fa-prescription"></i></div><div class="record-info"><span class="record-type">Prescription</span><h4>Metformin 500mg</h4><span class="record-date">10 Nov 2024 • Dr. Lee</span></div><i class="fas fa-chevron-right"></i></div>
+                                <div class="record-card xray"><div class="record-icon"><i class="fas fa-x-ray"></i></div><div class="record-info"><span class="record-type">X-Ray</span><h4>Chest X-Ray</h4><span class="record-date">5 Oct 2024 • HUKM</span></div><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 5: Medications -->
+            <div class="screen-wrapper">
+                <div class="screen-label">5. My Medications</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content meds-content">
+                            <div class="page-header"><button class="back-btn"><i class="fas fa-arrow-left"></i></button><h2>My Medications</h2><button class="scan-btn"><i class="fas fa-wifi"></i></button></div>
+                            <div class="nfc-scan-card"><div class="nfc-icon pulse"><i class="fas fa-wifi"></i></div><div class="nfc-text"><h4>Scan Medication</h4><p>Tap NFC to get drug info</p></div></div>
+                            <div class="meds-section"><h3>Today's Schedule</h3>
+                                <div class="meds-timeline">
+                                    <div class="med-time-slot"><div class="time-label"><i class="fas fa-sun"></i><span>Morning</span></div><div class="med-card taken"><div class="med-icon"><i class="fas fa-capsules"></i></div><div class="med-info"><h4>Metformin 500mg</h4><span>1 tablet after breakfast</span></div><div class="med-status"><i class="fas fa-check-circle"></i></div></div></div>
+                                    <div class="med-time-slot"><div class="time-label"><i class="fas fa-cloud-sun"></i><span>Afternoon</span></div><div class="med-card pending"><div class="med-icon"><i class="fas fa-pills"></i></div><div class="med-info"><h4>Lisinopril 10mg</h4><span>1 tablet with lunch</span></div><div class="med-status pending"><i class="fas fa-clock"></i></div></div></div>
+                                    <div class="med-time-slot"><div class="time-label"><i class="fas fa-moon"></i><span>Night</span></div><div class="med-card"><div class="med-icon"><i class="fas fa-tablets"></i></div><div class="med-info"><h4>Atorvastatin 20mg</h4><span>1 tablet before sleep</span></div><div class="med-status"><i class="fas fa-circle"></i></div></div></div>
+                                </div>
+                            </div>
+                            <div class="interaction-alert"><i class="fas fa-triangle-exclamation"></i><div class="alert-text"><strong>Drug Interaction Alert</strong><p>Avoid grapefruit with Atorvastatin</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 6: Appointments -->
+            <div class="screen-wrapper">
+                <div class="screen-label">6. My Appointments</div>
+                <div class="phone-frame"><div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                        <div class="screen-content appointments-content">
+                            <div class="page-header"><button class="back-btn"><i class="fas fa-arrow-left"></i></button><h2>My Appointments</h2><button class="add-btn"><i class="fas fa-plus"></i></button></div>
+                            <div class="calendar-mini"><div class="calendar-header"><button><i class="fas fa-chevron-left"></i></button><span>December 2024</span><button><i class="fas fa-chevron-right"></i></button></div><div class="calendar-days"><span class="day">Mon</span><span class="day">Tue</span><span class="day">Wed</span><span class="day">Thu</span><span class="day">Fri</span><span class="day">Sat</span><span class="day">Sun</span></div><div class="calendar-dates"><span>9</span><span class="today">10</span><span class="has-appt">11</span><span>12</span><span>13</span><span>14</span><span>15</span></div></div>
+                            <div class="appointments-list"><h3>Upcoming Appointments</h3>
+                                <div class="appointment-card upcoming"><div class="appt-date"><span class="day">11</span><span class="month">DEC</span></div><div class="appt-info"><h4>General Checkup</h4><p><i class="fas fa-user-doctor"></i> Dr. Sarah Ahmad</p><p><i class="fas fa-clock"></i> 10:00 AM</p><p><i class="fas fa-location-dot"></i> Klinik Kesihatan SS2</p></div><div class="appt-actions"><button class="action-mini"><i class="fas fa-directions"></i></button></div></div>
+                                <div class="pre-visit-alert"><i class="fas fa-info-circle"></i><span>Pre-visit: Fast for 6 hours before appointment</span></div>
+                                <div class="appointment-card"><div class="appt-date"><span class="day">20</span><span class="month">DEC</span></div><div class="appt-info"><h4>Dental Checkup</h4><p><i class="fas fa-tooth"></i> Dr. Tan Wei Ming</p><p><i class="fas fa-clock"></i> 2:30 PM</p><p><i class="fas fa-location-dot"></i> Dental Care Plus</p></div></div>
+                            </div>
+                            <button class="book-btn"><i class="fas fa-calendar-plus"></i> Book New Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional screens info -->
+        <div style="text-align:center; padding:60px 20px; color:white;">
+            <h2 style="margin-bottom:20px;"><i class="fas fa-ellipsis"></i> Additional Screens</h2>
+            <p style="opacity:0.8; max-width:600px; margin:0 auto 30px; line-height:1.6;">
+                View the separate HTML files for complete screens including:<br>
+                <strong>screens-part2.html</strong> - Benefits, Guardians, Emergency, Map, Chatbot, Child Dashboard<br>
+                <strong>screens-provider.html</strong> - Healthcare Provider interfaces
+            </p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="screens-part2.html" style="background:#0066FF; color:white; padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:600;">View Citizen Screens 7-12</a>
+                <a href="screens-provider.html" style="background:#1E3A5F; color:white; padding:14px 28px; border-radius:12px; text-decoration:none; font-weight:600;">View Provider Screens</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="transitions.js"></script>
+</body>
+</html>
+

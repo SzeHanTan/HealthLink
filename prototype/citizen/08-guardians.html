@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Guardians - CitizenHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>8. My Guardians</h1><p>Secure delegation system with permissions</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 16px; background: white;">
+                        <a href="03-dashboard.html" style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <h2 style="font-size: 18px; font-weight: 700;">My Guardians</h2>
+                        <button style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; color: #1A1D26; font-size: 16px;"><i class="fas fa-user-plus"></i></button>
+                    </div>
+                    <div style="margin: 16px 20px; background: linear-gradient(135deg, #EEF2FF, #E0E7FF); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-shield-halved" style="font-size: 24px; color: #4F46E5;"></i>
+                        <p style="font-size: 13px; color: #3730A3; line-height: 1.4;">Guardians can manage your health on your behalf with permissions you control.</p>
+                    </div>
+                    <div style="padding: 0 20px;">
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">Active Guardians</h3>
+                        <a href="08b-guardian-permissions.html" class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; gap: 14px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #818CF8, #6366F1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;"><i class="fas fa-user"></i></div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 2px;">Siti Aminah</h4>
+                                <span style="font-size: 12px; color: #6B7280; display: block; margin-bottom: 8px;">Spouse</span>
+                                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <span style="font-size: 10px; padding: 3px 8px; border-radius: 20px; display: flex; align-items: center; gap: 4px; background: #D1FAE5; color: #065F46;"><i class="fas fa-check"></i> Appointments</span>
+                                    <span style="font-size: 10px; padding: 3px 8px; border-radius: 20px; display: flex; align-items: center; gap: 4px; background: #D1FAE5; color: #065F46;"><i class="fas fa-check"></i> Records</span>
+                                    <span style="font-size: 10px; padding: 3px 8px; border-radius: 20px; display: flex; align-items: center; gap: 4px; background: #D1FAE5; color: #065F46;"><i class="fas fa-check"></i> Medications</span>
+                                </div>
+                            </div>
+                            <div style="width: 36px; height: 36px; background: #E6F0FF; border: none; border-radius: 50%; color: #0066FF; display: flex; align-items: center; justify-content: center;"><i class="fas fa-sliders"></i></div>
+                        </a>
+                        <a href="08b-guardian-permissions.html" class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; gap: 14px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px;"><i class="fas fa-user-doctor"></i></div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 15px; font-weight: 600; margin-bottom: 2px;">Dr. Rahman</h4>
+                                <span style="font-size: 12px; color: #6B7280; display: block; margin-bottom: 8px;">Primary Care Doctor</span>
+                                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <span style="font-size: 10px; padding: 3px 8px; border-radius: 20px; display: flex; align-items: center; gap: 4px; background: #D1FAE5; color: #065F46;"><i class="fas fa-check"></i> Records</span>
+                                    <span style="font-size: 10px; padding: 3px 8px; border-radius: 20px; display: flex; align-items: center; gap: 4px; background: #FEE2E2; color: #991B1B;"><i class="fas fa-xmark"></i> Finances</span>
+                                </div>
+                            </div>
+                            <div style="width: 36px; height: 36px; background: #E6F0FF; border: none; border-radius: 50%; color: #0066FF; display: flex; align-items: center; justify-content: center;"><i class="fas fa-sliders"></i></div>
+                        </a>
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">My Dependents</h3>
+                        <a href="12-child.html" class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;"><i class="fas fa-child"></i></div>
+                            <div style="flex: 1;"><h4 style="font-size: 15px; font-weight: 600;">Ahmad Jr.</h4><span style="font-size: 12px; color: #6B7280;">8 years old • Child</span></div>
+                            <button style="background: #0066FF; color: white; border: none; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: 600;">Manage</button>
+                        </a>
+                    </div>
+                    <button class="clickable" style="width: calc(100% - 40px); margin: 0 20px; background: white; border: 2px dashed #E5E7EB; padding: 16px; border-radius: 16px; font-size: 14px; font-weight: 600; color: #6B7280; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="fas fa-user-plus"></i> Add New Guardian
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="07-benefits.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">8 / 12</span>
+            <a href="09-emergency.html" class="nav-btn next">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-signup.html">1</a><a href="02-role.html">2</a><a href="03-dashboard.html">3</a><a href="04-records.html">4</a><a href="05-medications.html">5</a><a href="06-appointments.html">6</a><a href="07-benefits.html">7</a><a href="08-guardians.html" class="active">8</a><a href="09-emergency.html">9</a><a href="10-map.html">10</a><a href="11-chatbot.html">11</a><a href="12-child.html">12</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+
+
+
+

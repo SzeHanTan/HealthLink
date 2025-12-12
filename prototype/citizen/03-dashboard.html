@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CitizenHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        #qrModal > div {
+            animation: scaleIn 0.25s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+
+    <div class="screen-title">
+        <h1>3. Dashboard</h1>
+        <p>Unified view with role switching between My Health & Guardian Mode</p>
+    </div>
+
+    <div class="phone-container">
+        <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar">
+                    <span class="time">9:41</span>
+                    <div class="status-icons">
+                        <i class="fas fa-signal"></i>
+                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                </div>
+                <div class="screen-content" style="background: #F5F7FA; padding: 0 0 80px;">
+                    <!-- Header with Avatar & Emergency -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 20px 12px; background: white;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #0066FF, #4F46E5); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <span style="font-size: 12px; color: #6B7280; display: block;">Good Morning</span>
+                                <h2 style="font-size: 18px; font-weight: 700;">Ahmad Razif</h2>
+                            </div>
+                        </div>
+                        <a href="09-emergency.html" class="clickable pulse-ring" style="width: 48px; height: 48px; background: #FF3B30; border: none; border-radius: 50%; color: white; font-size: 20px; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                            <i class="fas fa-heart-pulse"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- ✨ ROLE SWITCHER ✨ -->
+                    <div style="padding: 0 20px 16px; background: white;">
+                        <div class="role-switcher" id="roleSwitcher">
+                            <a href="03-dashboard.html" class="role-tab active" data-mode="citizen">
+                                <i class="fas fa-user-circle"></i>
+                                <span>My Health</span>
+                            </a>
+                            <a href="03b-guardian-dashboard.html" class="role-tab" data-mode="guardian" style="position: relative;">
+                                <i class="fas fa-user-shield"></i>
+                                <span>Guardian</span>
+                                <span class="role-badge">3</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Smart ID Card (Clickable) -->
+                    <div class="clickable" id="smartIdCard" onclick="document.getElementById('qrModal').style.display='flex'" style="margin: 16px 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); border-radius: 24px; padding: 20px; color: white; position: relative; overflow: hidden; cursor: pointer;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.8;">CitizenHealth Smart ID</span>
+                            <div style="width: 36px; height: 36px; background: rgba(255,255,255,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 22px; font-weight: 700; font-family: monospace; letter-spacing: 2px; margin-bottom: 16px;">CH-2024-889912</div>
+                        <div style="display: flex; gap: 16px;">
+                            <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 20px;">
+                                <i class="fas fa-droplet"></i> O+
+                            </span>
+                            <span style="display: flex; align-items: center; gap: 6px; font-size: 12px; background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 20px;">
+                                <i class="fas fa-triangle-exclamation"></i> Penicillin
+                            </span>
+                        </div>
+                        <!-- Tap hint -->
+                        <div style="position: absolute; bottom: 8px; right: 16px; font-size: 10px; opacity: 0.5; display: flex; align-items: center; gap: 4px;">
+                            <i class="fas fa-hand-pointer"></i> Tap to show QR
+                        </div>
+                    </div>
+                    
+                    <!-- QR Code Modal -->
+                    <div id="qrModal" onclick="this.style.display='none'" style="display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.85); z-index: 100; flex-direction: column; align-items: center; justify-content: center; padding: 24px; animation: fadeIn 0.2s ease;">
+                        <div onclick="event.stopPropagation()" style="background: white; border-radius: 24px; padding: 24px; width: 100%; max-width: 280px; text-align: center;">
+                            <!-- Header -->
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #0066FF, #4F46E5); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-shield-heart" style="color: white; font-size: 14px;"></i>
+                                </div>
+                                <span style="font-weight: 700; font-size: 14px; color: #1A1D26;">CitizenHealth</span>
+                            </div>
+                            
+                            <!-- QR Code -->
+                            <div style="background: white; padding: 16px; border-radius: 16px; border: 2px solid #E5E7EB; margin-bottom: 16px;">
+                                <svg viewBox="0 0 100 100" style="width: 180px; height: 180px;">
+                                    <!-- QR Code Pattern -->
+                                    <rect fill="#1A1D26" x="10" y="10" width="25" height="25"/>
+                                    <rect fill="white" x="14" y="14" width="17" height="17"/>
+                                    <rect fill="#1A1D26" x="17" y="17" width="11" height="11"/>
+                                    
+                                    <rect fill="#1A1D26" x="65" y="10" width="25" height="25"/>
+                                    <rect fill="white" x="69" y="14" width="17" height="17"/>
+                                    <rect fill="#1A1D26" x="72" y="17" width="11" height="11"/>
+                                    
+                                    <rect fill="#1A1D26" x="10" y="65" width="25" height="25"/>
+                                    <rect fill="white" x="14" y="69" width="17" height="17"/>
+                                    <rect fill="#1A1D26" x="17" y="72" width="11" height="11"/>
+                                    
+                                    <!-- Data pattern -->
+                                    <rect fill="#1A1D26" x="40" y="10" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="50" y="10" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="40" y="20" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="45" y="15" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="55" y="20" width="5" height="5"/>
+                                    
+                                    <rect fill="#1A1D26" x="10" y="40" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="20" y="45" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="15" y="50" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="25" y="40" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="30" y="50" width="5" height="5"/>
+                                    
+                                    <rect fill="#1A1D26" x="40" y="40" width="20" height="20" rx="4"/>
+                                    <rect fill="white" x="45" y="45" width="10" height="10" rx="2"/>
+                                    
+                                    <rect fill="#1A1D26" x="65" y="40" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="75" y="45" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="80" y="40" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="85" y="50" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="70" y="55" width="5" height="5"/>
+                                    
+                                    <rect fill="#1A1D26" x="40" y="65" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="50" y="70" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="45" y="75" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="55" y="80" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="40" y="85" width="5" height="5"/>
+                                    
+                                    <rect fill="#1A1D26" x="65" y="65" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="75" y="70" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="70" y="80" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="80" y="75" width="5" height="5"/>
+                                    <rect fill="#1A1D26" x="85" y="85" width="5" height="5"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- ID Info -->
+                            <div style="background: #F5F7FA; border-radius: 12px; padding: 12px; margin-bottom: 16px;">
+                                <p style="font-family: monospace; font-size: 16px; font-weight: 700; color: #1A1D26; letter-spacing: 1px;">CH-2024-889912</p>
+                                <p style="font-size: 12px; color: #6B7280; margin-top: 4px;">Ahmad Razif bin Abdullah</p>
+                            </div>
+                            
+                            <!-- Info badges -->
+                            <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 16px;">
+                                <span style="font-size: 11px; padding: 5px 10px; border-radius: 20px; background: #FEE2E2; color: #991B1B; display: flex; align-items: center; gap: 4px;">
+                                    <i class="fas fa-droplet"></i> O+
+                                </span>
+                                <span style="font-size: 11px; padding: 5px 10px; border-radius: 20px; background: #FEF3C7; color: #92400E; display: flex; align-items: center; gap: 4px;">
+                                    <i class="fas fa-triangle-exclamation"></i> Penicillin
+                                </span>
+                            </div>
+                            
+                            <!-- Instruction -->
+                            <p style="font-size: 12px; color: #6B7280; margin-bottom: 16px;">
+                                <i class="fas fa-info-circle" style="color: #0066FF;"></i> 
+                                Show this QR code at the clinic for quick check-in
+                            </p>
+                            
+                            <!-- Close button -->
+                            <button onclick="document.getElementById('qrModal').style.display='none'" style="width: 100%; background: #1A1D26; color: white; border: none; padding: 14px; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <i class="fas fa-xmark"></i> Close
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div style="padding: 0 20px;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <a href="04-records.html" class="clickable" style="background: white; border: none; border-radius: 16px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #E6F0FF, #CCE0FF); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #0066FF;">
+                                    <i class="fas fa-file-medical"></i>
+                                </div>
+                                <span style="font-size: 13px; font-weight: 600;">Health Records</span>
+                            </a>
+                            <a href="05-medications.html" class="clickable" style="background: white; border: none; border-radius: 16px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #E6FFF5, #B3FFE0); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #00C48C;">
+                                    <i class="fas fa-pills"></i>
+                                </div>
+                                <span style="font-size: 13px; font-weight: 600;">Medications</span>
+                            </a>
+                            <a href="06-appointments.html" class="clickable" style="background: white; border: none; border-radius: 16px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #FFF0E6, #FFE0CC); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #FF6B35;">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <span style="font-size: 13px; font-weight: 600;">Appointments</span>
+                            </a>
+                            <a href="07-benefits.html" class="clickable" style="background: white; border: none; border-radius: 16px; padding: 20px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #F5E6FF, #E6CCFF); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #8B5CF6;">
+                                    <i class="fas fa-hand-holding-heart"></i>
+                                </div>
+                                <span style="font-size: 13px; font-weight: 600;">Benefits</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Upcoming -->
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">Upcoming</h3>
+                        <a href="06-appointments.html" class="clickable" style="background: white; border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-decoration: none; color: inherit;">
+                            <div style="width: 44px; height: 44px; background: #E6F0FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #0066FF; font-size: 18px;">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <div style="flex: 1;">
+                                <span style="font-weight: 600; font-size: 14px; display: block;">Dr. Sarah - Checkup</span>
+                                <span style="font-size: 12px; color: #6B7280;">Tomorrow, 10:00 AM</span>
+                            </div>
+                            <i class="fas fa-chevron-right" style="color: #9CA3AF;"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Bottom Navigation -->
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: white; display: flex; justify-content: space-around; padding: 8px 0 24px; border-top: 1px solid #E5E7EB;">
+                        <a href="03-dashboard.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #0066FF; font-size: 10px; text-decoration: none; padding: 8px 12px;">
+                            <i class="fas fa-house" style="font-size: 20px;"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="08-guardians.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #9CA3AF; font-size: 10px; text-decoration: none; padding: 8px 12px;">
+                            <i class="fas fa-users" style="font-size: 20px;"></i>
+                            <span>Guardians</span>
+                        </a>
+                        <a href="11-chatbot.html" style="display: flex; align-items: center; justify-content: center; background: #0066FF; color: white; border-radius: 50%; width: 56px; height: 56px; margin-top: -28px; box-shadow: 0 4px 12px rgba(0,102,255,0.4); text-decoration: none;">
+                            <i class="fas fa-robot" style="font-size: 24px;"></i>
+                        </a>
+                        <a href="10-map.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #9CA3AF; font-size: 10px; text-decoration: none; padding: 8px 12px;">
+                            <i class="fas fa-map-location-dot" style="font-size: 20px;"></i>
+                            <span>Nearby</span>
+                        </a>
+                        <button style="display: flex; flex-direction: column; align-items: center; gap: 4px; background: none; border: none; color: #9CA3AF; font-size: 10px; cursor: pointer; padding: 8px 12px;">
+                            <i class="fas fa-gear" style="font-size: 20px;"></i>
+                            <span>Settings</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <a href="02-role.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">3 / 12</span>
+            <a href="04-records.html" class="nav-btn next">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="screen-list">
+            <a href="01-signup.html">1</a>
+            <a href="02-role.html">2</a>
+            <a href="03-dashboard.html" class="active">3</a>
+            <a href="04-records.html">4</a>
+            <a href="05-medications.html">5</a>
+            <a href="06-appointments.html">6</a>
+            <a href="07-benefits.html">7</a>
+            <a href="08-guardians.html">8</a>
+            <a href="09-emergency.html">9</a>
+            <a href="10-map.html">10</a>
+            <a href="11-chatbot.html">11</a>
+            <a href="12-child.html">12</a>
+        </div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+
