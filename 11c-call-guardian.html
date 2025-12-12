@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Guardian - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        @keyframes calling-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        @keyframes ring-wave {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+        .calling-avatar {
+            animation: calling-pulse 2s ease-in-out infinite;
+        }
+        .ring-wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #10B981;
+            border-radius: 50%;
+            animation: ring-wave 1.5s ease-out infinite;
+        }
+        .ring-wave:nth-child(2) { animation-delay: 0.5s; }
+        .ring-wave:nth-child(3) { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>11c. Call Guardian</h1><p>Voice/Video call with guardian</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: linear-gradient(180deg, #065F46 0%, #10B981 50%, #34D399 100%); display: flex; flex-direction: column; height: calc(100% - 44px);">
+                    
+                    <!-- Header -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px;">
+                        <a href="11b-chatbot-voice.html" style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <span style="color: white; font-size: 13px; font-weight: 500; background: rgba(255,255,255,0.2); padding: 6px 14px; border-radius: 20px;"><i class="fas fa-shield-check" style="margin-right: 6px;"></i> Secure Call</span>
+                        <div style="width: 40px;"></div>
+                    </div>
+
+                    <!-- Calling Status -->
+                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+                        
+                        <!-- Avatar with Ring Animation -->
+                        <div style="position: relative; width: 140px; height: 140px; margin-bottom: 24px;">
+                            <div class="ring-wave"></div>
+                            <div class="ring-wave"></div>
+                            <div class="ring-wave"></div>
+                            <div class="calling-avatar" style="width: 140px; height: 140px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+                                <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <span style="font-size: 48px; color: white; font-weight: 700;">SA</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <h2 style="color: white; font-size: 28px; font-weight: 700; margin-bottom: 4px;">Siti Aminah</h2>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 8px;">Wife • Guardian</p>
+                        
+                        <!-- Calling Status -->
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 32px;">
+                            <div style="width: 8px; height: 8px; background: white; border-radius: 50%; animation: calling-pulse 1s ease-in-out infinite;"></div>
+                            <span style="color: white; font-size: 18px; font-weight: 500;">Calling...</span>
+                        </div>
+
+                        <!-- Quick Info Card -->
+                        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 16px; padding: 16px 24px; margin-bottom: 20px;">
+                            <div style="display: flex; gap: 24px; color: white;">
+                                <div style="text-align: center;">
+                                    <i class="fas fa-phone" style="font-size: 18px; margin-bottom: 4px; display: block;"></i>
+                                    <span style="font-size: 11px; opacity: 0.8;">Voice Call</span>
+                                </div>
+                                <div style="text-align: center;">
+                                    <i class="fas fa-user-shield" style="font-size: 18px; margin-bottom: 4px; display: block;"></i>
+                                    <span style="font-size: 11px; opacity: 0.8;">Guardian</span>
+                                </div>
+                                <div style="text-align: center;">
+                                    <i class="fas fa-clock" style="font-size: 18px; margin-bottom: 4px; display: block;"></i>
+                                    <span style="font-size: 11px; opacity: 0.8;">00:05</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Initiated Badge -->
+                        <div style="background: rgba(255,255,255,0.2); padding: 10px 16px; border-radius: 12px; display: flex; align-items: center; gap: 8px;">
+                            <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #EC4899, #8B5CF6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-robot" style="color: white; font-size: 12px;"></i>
+                            </div>
+                            <span style="color: white; font-size: 12px;">Call initiated by SmartHealth AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Call Actions -->
+                    <div style="padding: 24px 40px 40px; display: flex; justify-content: center; gap: 24px;">
+                        <!-- Mute -->
+                        <button style="width: 60px; height: 60px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; font-size: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        
+                        <!-- End Call -->
+                        <a href="11b-chatbot-voice.html" style="width: 70px; height: 70px; background: #DC2626; border: none; border-radius: 50%; color: white; font-size: 28px; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(220,38,38,0.4);">
+                            <i class="fas fa-phone-slash"></i>
+                        </a>
+                        
+                        <!-- Speaker -->
+                        <button style="width: 60px; height: 60px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; font-size: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;">
+                            <i class="fas fa-volume-high"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bottom Action Labels -->
+                    <div style="display: flex; justify-content: center; gap: 48px; padding-bottom: 20px;">
+                        <span style="color: rgba(255,255,255,0.7); font-size: 11px;">Mute</span>
+                        <span style="color: rgba(255,255,255,0.7); font-size: 11px; margin-left: 12px;">End</span>
+                        <span style="color: rgba(255,255,255,0.7); font-size: 11px;">Speaker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="11b-chatbot-voice.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Back</a>
+            <span class="screen-indicator">Calling Guardian</span>
+            <a href="11-chatbot.html" class="nav-btn next">Chat <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="11-chatbot.html">Chat</a><a href="11b-chatbot-voice.html">Voice</a><a href="11c-call-guardian.html" class="active">Call</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>

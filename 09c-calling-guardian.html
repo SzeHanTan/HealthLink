@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Guardian - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        @keyframes calling-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        @keyframes ring-wave {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.8); opacity: 0; }
+        }
+        @keyframes emergency-flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .calling-avatar {
+            animation: calling-pulse 1.5s ease-in-out infinite;
+        }
+        .ring-wave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid white;
+            border-radius: 50%;
+            animation: ring-wave 1.5s ease-out infinite;
+        }
+        .ring-wave:nth-child(2) { animation-delay: 0.5s; }
+        .ring-wave:nth-child(3) { animation-delay: 1s; }
+        .emergency-indicator {
+            animation: emergency-flash 1s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>9c. Calling Guardian</h1><p>Emergency call in progress</p></div>
+    <div class="phone-container">
+        <div class="phone-frame" style="background: #1a1a1a;"><div class="phone-notch"></div>
+            <div class="phone-screen" style="background: linear-gradient(180deg, #DC2626 0%, #7F1D1D 100%);">
+                <div class="status-bar light"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="display: flex; flex-direction: column; align-items: center; padding: 20px; color: white; height: calc(100% - 44px);">
+                    
+                    <!-- Emergency Badge -->
+                    <div class="emergency-indicator" style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                        <i class="fas fa-triangle-exclamation"></i>
+                        <span style="font-size: 12px; font-weight: 600;">EMERGENCY CALL</span>
+                    </div>
+
+                    <!-- Avatar with Ring Animation -->
+                    <div style="position: relative; width: 140px; height: 140px; margin-bottom: 24px;">
+                        <div class="ring-wave"></div>
+                        <div class="ring-wave"></div>
+                        <div class="ring-wave"></div>
+                        <div class="calling-avatar" style="width: 140px; height: 140px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; box-shadow: 0 8px 32px rgba(0,0,0,0.3);">
+                            <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <span style="font-size: 48px; color: white; font-weight: 700;">SA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 4px;">Siti Aminah</h2>
+                    <p style="font-size: 16px; opacity: 0.9; margin-bottom: 6px;">Wife • Primary Guardian</p>
+                    
+                    <!-- Calling Status -->
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 24px;">
+                        <div style="width: 8px; height: 8px; background: white; border-radius: 50%; animation: calling-pulse 1s ease-in-out infinite;"></div>
+                        <span style="font-size: 18px; font-weight: 500;">Calling...</span>
+                    </div>
+
+                    <!-- Auto-sharing Info -->
+                    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 16px; padding: 16px; width: 100%; margin-bottom: 20px;">
+                        <p style="font-size: 12px; opacity: 0.8; margin-bottom: 10px; text-align: center;">Auto-sharing with guardian:</p>
+                        <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 12px; font-size: 11px; display: flex; align-items: center; gap: 4px;">
+                                <i class="fas fa-location-dot"></i> Live Location
+                            </span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 12px; font-size: 11px; display: flex; align-items: center; gap: 4px;">
+                                <i class="fas fa-heart-pulse"></i> Vitals
+                            </span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 12px; font-size: 11px; display: flex; align-items: center; gap: 4px;">
+                                <i class="fas fa-file-medical"></i> Medical Info
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Message Preview -->
+                    <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 12px 16px; width: 100%; margin-bottom: auto;">
+                        <p style="font-size: 12px; opacity: 0.7; margin-bottom: 4px;">SMS sent to guardian:</p>
+                        <p style="font-size: 13px; line-height: 1.4;">"🚨 EMERGENCY: Ahmad Razif needs help. Location: Jalan SS2/55, PJ. Tap to view live location."</p>
+                    </div>
+
+                    <!-- Call Actions -->
+                    <div style="display: flex; justify-content: center; gap: 20px; padding: 20px 0;">
+                        <!-- Speaker -->
+                        <button style="width: 56px; height: 56px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; font-size: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <i class="fas fa-volume-high"></i>
+                        </button>
+                        
+                        <!-- End Call -->
+                        <a href="09b-choose-guardian.html" style="width: 70px; height: 70px; background: white; border: none; border-radius: 50%; color: #DC2626; font-size: 28px; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+                            <i class="fas fa-phone-slash"></i>
+                        </a>
+                        
+                        <!-- Mute -->
+                        <button style="width: 56px; height: 56px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; font-size: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+
+                    <!-- Action Labels -->
+                    <div style="display: flex; justify-content: center; gap: 36px; margin-bottom: 10px;">
+                        <span style="font-size: 11px; opacity: 0.7;">Speaker</span>
+                        <span style="font-size: 11px; opacity: 0.7; margin-left: 8px;">End</span>
+                        <span style="font-size: 11px; opacity: 0.7; margin-left: 4px;">Mute</span>
+                    </div>
+
+                    <!-- Try Another Guardian -->
+                    <a href="09b-choose-guardian.html" style="color: rgba(255,255,255,0.8); font-size: 13px; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+                        <i class="fas fa-user-plus"></i> Call another guardian
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="09b-choose-guardian.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Choose</a>
+            <span class="screen-indicator">Calling</span>
+            <a href="09-emergency.html" class="nav-btn next">Emergency <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="09-emergency.html">Emergency</a><a href="09b-choose-guardian.html">Choose</a><a href="09c-calling-guardian.html" class="active">Calling</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>

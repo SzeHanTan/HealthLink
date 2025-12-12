@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medications - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>5. My Medications</h1><p>NFC scan, dosage tracking, drug interactions</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #F5F7FA; padding: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 16px; background: white;">
+                        <a href="03-dashboard.html" style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <h2 style="font-size: 18px; font-weight: 700;">My Medications</h2>
+                        <button style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 50%; color: #1A1D26; font-size: 16px;"><i class="fas fa-wifi"></i></button>
+                    </div>
+                    <!-- NFC Scan Card -->
+                    <div class="clickable" style="margin: 16px 20px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border-radius: 24px; padding: 20px; display: flex; align-items: center; gap: 16px; color: white;">
+                        <div class="pulse" style="width: 56px; height: 56px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;"><i class="fas fa-wifi"></i></div>
+                        <div><h4 style="font-size: 16px; font-weight: 600; margin-bottom: 2px;">Scan Medication</h4><p style="font-size: 13px; opacity: 0.8;">Tap NFC to get drug info</p></div>
+                    </div>
+                    <!-- Schedule -->
+                    <div style="padding: 0 20px;">
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 16px;">Today's Schedule</h3>
+                        <div style="margin-bottom: 20px;">
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6B7280; margin-bottom: 10px;"><i class="fas fa-sun" style="color: #FFB800;"></i><span>Morning</span></div>
+                            <div style="background: white; border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #34C759; background: linear-gradient(90deg, #F0FDF4 0%, white 20%);">
+                                <div style="width: 44px; height: 44px; background: #F5F7FA; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #0066FF;"><i class="fas fa-capsules"></i></div>
+                                <div style="flex: 1;"><h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Metformin 500mg</h4><span style="font-size: 12px; color: #6B7280;">1 tablet after breakfast</span></div>
+                                <i class="fas fa-check-circle" style="font-size: 20px; color: #34C759;"></i>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6B7280; margin-bottom: 10px;"><i class="fas fa-cloud-sun" style="color: #FFB800;"></i><span>Afternoon</span></div>
+                            <div style="background: white; border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #FFB800; background: linear-gradient(90deg, #FFFBEB 0%, white 20%);">
+                                <div style="width: 44px; height: 44px; background: #F5F7FA; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #0066FF;"><i class="fas fa-pills"></i></div>
+                                <div style="flex: 1;"><h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Lisinopril 10mg</h4><span style="font-size: 12px; color: #6B7280;">1 tablet with lunch</span></div>
+                                <i class="fas fa-clock" style="font-size: 20px; color: #FFB800;"></i>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6B7280; margin-bottom: 10px;"><i class="fas fa-moon" style="color: #FFB800;"></i><span>Night</span></div>
+                            <div style="background: white; border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #E5E7EB;">
+                                <div style="width: 44px; height: 44px; background: #F5F7FA; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #0066FF;"><i class="fas fa-tablets"></i></div>
+                                <div style="flex: 1;"><h4 style="font-size: 14px; font-weight: 600; margin-bottom: 2px;">Atorvastatin 20mg</h4><span style="font-size: 12px; color: #6B7280;">1 tablet before sleep</span></div>
+                                <i class="fas fa-circle" style="font-size: 12px; color: #9CA3AF;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Alert -->
+                    <div style="margin: 20px; background: #FEF3C7; border: 1px solid #F59E0B; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-triangle-exclamation" style="font-size: 20px; color: #D97706;"></i>
+                        <div><strong style="display: block; font-size: 13px; color: #92400E;">Drug Interaction Alert</strong><p style="font-size: 12px; color: #B45309;">Avoid grapefruit with Atorvastatin</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="04-records.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">5 / 12</span>
+            <a href="06-appointments.html" class="nav-btn next">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-signup.html">1</a><a href="02-role.html">2</a><a href="03-dashboard.html">3</a><a href="04-records.html">4</a><a href="05-medications.html" class="active">5</a><a href="06-appointments.html">6</a><a href="07-benefits.html">7</a><a href="08-guardians.html">8</a><a href="09-emergency.html">9</a><a href="10-map.html">10</a><a href="11-chatbot.html">11</a><a href="12-child.html">12</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+
