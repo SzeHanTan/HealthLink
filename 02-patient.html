@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information - ProviderHealth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        .screen-list a.active { background: var(--provider); }
+        .phone-frame { width: 800px; height: 600px; border-radius: 24px; padding: 10px; }
+        .phone-frame .phone-screen { border-radius: 18px; }
+        .phone-frame .phone-notch { display: none; }
+    </style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="../citizen/index.html" class="citizen"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="index.html" class="provider active"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>2. Patient Information</h1><p>View patient health data for treatment</p></div>
+    <div class="phone-container">
+        <div class="phone-frame tablet-frame">
+            <div class="phone-screen" style="background: #F5F7FA;">
+                <!-- Header -->
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; background: white; border-bottom: 1px solid #E5E7EB;">
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <a href="01-checkin.html" style="width: 40px; height: 40px; background: #F5F7FA; border: none; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <div><h2 style="font-size: 20px; font-weight: 700;">Patient Record</h2><p style="font-size: 12px; color: #6B7280;">Queue #A01 • Dr. Sarah Ahmad</p></div>
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        <button style="background: #DC2626; color: white; border: none; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px;"><i class="fas fa-triangle-exclamation"></i> Allergy Alert</button>
+                        <a href="04-prescription.html" style="background: #0066FF; color: white; border: none; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; text-decoration: none;"><i class="fas fa-prescription"></i> e-Prescribe</a>
+                    </div>
+                </div>
+                <div style="display: flex; height: calc(100% - 72px); overflow: hidden;">
+                    <!-- Left Panel - Patient Info -->
+                    <div style="width: 300px; background: white; border-right: 1px solid #E5E7EB; padding: 20px; overflow-y: auto;">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066FF, #4F46E5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 32px; color: white;"><i class="fas fa-user"></i></div>
+                            <h3 style="font-size: 18px; font-weight: 700;">Ahmad Razif</h3>
+                            <p style="font-size: 13px; color: #6B7280;">IC: 920515-14-5678</p>
+                            <span style="display: inline-block; background: #E6F0FF; color: #0066FF; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-top: 8px;">Smart ID: CH-2024-889912</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
+                            <div style="background: #F5F7FA; border-radius: 10px; padding: 12px; text-align: center;"><i class="fas fa-droplet" style="color: #DC2626; margin-bottom: 4px; display: block;"></i><span style="font-size: 16px; font-weight: 700;">O+</span><span style="font-size: 10px; color: #6B7280; display: block;">Blood</span></div>
+                            <div style="background: #F5F7FA; border-radius: 10px; padding: 12px; text-align: center;"><i class="fas fa-calendar" style="color: #0066FF; margin-bottom: 4px; display: block;"></i><span style="font-size: 16px; font-weight: 700;">32</span><span style="font-size: 10px; color: #6B7280; display: block;">Age</span></div>
+                            <div style="background: #F5F7FA; border-radius: 10px; padding: 12px; text-align: center;"><i class="fas fa-weight-scale" style="color: #10B981; margin-bottom: 4px; display: block;"></i><span style="font-size: 16px; font-weight: 700;">75</span><span style="font-size: 10px; color: #6B7280; display: block;">kg</span></div>
+                            <div style="background: #F5F7FA; border-radius: 10px; padding: 12px; text-align: center;"><i class="fas fa-ruler-vertical" style="color: #8B5CF6; margin-bottom: 4px; display: block;"></i><span style="font-size: 16px; font-weight: 700;">175</span><span style="font-size: 10px; color: #6B7280; display: block;">cm</span></div>
+                        </div>
+                        <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 10px; padding: 12px; margin-bottom: 16px;">
+                            <h4 style="font-size: 12px; color: #991B1B; display: flex; align-items: center; gap: 6px; margin-bottom: 6px;"><i class="fas fa-triangle-exclamation"></i> ALLERGIES</h4>
+                            <span style="display: inline-block; background: #FEE2E2; color: #991B1B; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-right: 4px;">Penicillin</span>
+                            <span style="display: inline-block; background: #FEE2E2; color: #991B1B; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600;">Shellfish</span>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 12px; color: #6B7280; margin-bottom: 8px;">CURRENT MEDICATIONS</h4>
+                            <div style="font-size: 12px; padding: 8px; background: #F5F7FA; border-radius: 8px; margin-bottom: 6px;">Metformin 500mg - 2x daily</div>
+                            <div style="font-size: 12px; padding: 8px; background: #F5F7FA; border-radius: 8px; margin-bottom: 6px;">Lisinopril 10mg - 1x daily</div>
+                            <div style="font-size: 12px; padding: 8px; background: #F5F7FA; border-radius: 8px;">Atorvastatin 20mg - 1x night</div>
+                        </div>
+                    </div>
+                    <!-- Right Panel - Records -->
+                    <div style="flex: 1; padding: 20px; overflow-y: auto;">
+                        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                            <button class="clickable" style="background: #0066FF; color: white; border: none; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer;">Medical History</button>
+                            <button class="clickable" style="background: white; color: #1A1D26; border: 1px solid #E5E7EB; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer;">Lab Results</button>
+                            <button class="clickable" style="background: white; color: #1A1D26; border: 1px solid #E5E7EB; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer;">Vaccinations</button>
+                            <button class="clickable" style="background: white; color: #1A1D26; border: 1px solid #E5E7EB; padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 500; cursor: pointer;">Imaging</button>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                <div><h4 style="font-size: 15px; font-weight: 600;">General Checkup</h4><span style="font-size: 12px; color: #6B7280;">10 Nov 2024 • PPUM</span></div>
+                                <span style="background: #E6F0FF; color: #0066FF; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;">Completed</span>
+                            </div>
+                            <p style="font-size: 13px; color: #374151; line-height: 1.5;">Blood pressure slightly elevated (140/90). Recommended lifestyle changes and continued medication. Follow-up in 3 months.</p>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                <div><h4 style="font-size: 15px; font-weight: 600;">Blood Test - HbA1c</h4><span style="font-size: 12px; color: #6B7280;">8 Nov 2024 • PathLab</span></div>
+                                <span style="background: #FEF3C7; color: #B45309; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;">Borderline</span>
+                            </div>
+                            <p style="font-size: 13px; color: #374151; line-height: 1.5;">HbA1c: 6.8% (borderline). FBS: 7.2 mmol/L. Cholesterol: 5.4 mmol/L. Continue diabetes management.</p>
+                        </div>
+                        <div class="clickable" style="background: white; border-radius: 12px; padding: 16px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                                <div><h4 style="font-size: 15px; font-weight: 600;">COVID-19 Booster</h4><span style="font-size: 12px; color: #6B7280;">15 Oct 2024 • KKM</span></div>
+                                <span style="background: #D1FAE5; color: #065F46; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;">Vaccinated</span>
+                            </div>
+                            <p style="font-size: 13px; color: #374151; line-height: 1.5;">Pfizer-BioNTech booster administered. No adverse reactions reported.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="01-checkin.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">2 / 4</span>
+            <a href="03-nfc.html" class="nav-btn next" style="background: var(--provider);">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-checkin.html">1</a><a href="02-patient.html" class="active">2</a><a href="03-nfc.html">3</a><a href="04-prescription.html">4</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+
