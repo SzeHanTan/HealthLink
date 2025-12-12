@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Dashboard - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>12. Child Dashboard</h1><p>Parent view of child's health profile</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: linear-gradient(180deg, #FEF3C7 0%, #FDE68A 100%); padding: 0;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 16px;">
+                        <a href="08-guardians.html" style="width: 40px; height: 40px; background: white; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <span style="font-size: 14px; font-weight: 600; color: #92400E;">Managing: Ahmad Jr.</span>
+                        <button style="width: 40px; height: 40px; background: white; border: none; border-radius: 50%; color: #1A1D26; font-size: 16px;"><i class="fas fa-gear"></i></button>
+                    </div>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FCD34D, #F59E0B); border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: white; box-shadow: 0 8px 24px rgba(245,158,11,0.4);"><i class="fas fa-child"></i></div>
+                        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 2px;">Ahmad Jr.</h2>
+                        <p style="font-size: 13px; color: #92400E;">8 years old • Smart ID: CH-2024-112233</p>
+                    </div>
+                    <div style="background: white; border-radius: 24px 24px 0 0; padding: 24px 20px; min-height: 400px;">
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px;">
+                            <div style="background: #FEF3C7; border-radius: 16px; padding: 14px 10px; text-align: center;">
+                                <i class="fas fa-ruler-vertical" style="font-size: 20px; color: #D97706; margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 18px; font-weight: 700; display: block;">125</span>
+                                <span style="font-size: 11px; color: #92400E;">cm height</span>
+                            </div>
+                            <div style="background: #ECFDF5; border-radius: 16px; padding: 14px 10px; text-align: center;">
+                                <i class="fas fa-weight-scale" style="font-size: 20px; color: #059669; margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 18px; font-weight: 700; display: block;">25</span>
+                                <span style="font-size: 11px; color: #065F46;">kg weight</span>
+                            </div>
+                            <div style="background: #EEF2FF; border-radius: 16px; padding: 14px 10px; text-align: center;">
+                                <i class="fas fa-droplet" style="font-size: 20px; color: #4F46E5; margin-bottom: 6px; display: block;"></i>
+                                <span style="font-size: 18px; font-weight: 700; display: block;">A+</span>
+                                <span style="font-size: 11px; color: #3730A3;">blood type</span>
+                            </div>
+                        </div>
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">Vaccination Status</h3>
+                        <div style="background: #F5F7FA; border-radius: 16px; padding: 16px; margin-bottom: 20px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span style="font-size: 13px; font-weight: 600;">Childhood Immunizations</span>
+                                <span style="font-size: 13px; color: #0066FF; font-weight: 600;">8/10</span>
+                            </div>
+                            <div style="height: 8px; background: #E5E7EB; border-radius: 4px; overflow: hidden;">
+                                <div style="height: 100%; width: 80%; background: linear-gradient(90deg, #34C759, #00C48C); border-radius: 4px;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-top: 12px;">
+                                <span style="font-size: 11px; color: #6B7280; display: flex; align-items: center; gap: 4px;"><i class="fas fa-check-circle" style="color: #34C759;"></i> MMR ✓</span>
+                                <span style="font-size: 11px; color: #6B7280; display: flex; align-items: center; gap: 4px;"><i class="fas fa-check-circle" style="color: #34C759;"></i> DTP ✓</span>
+                                <span style="font-size: 11px; color: #DC2626; display: flex; align-items: center; gap: 4px;"><i class="fas fa-clock"></i> HPV due</span>
+                            </div>
+                        </div>
+                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 12px;">Quick Actions</h3>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                            <button class="clickable" style="background: #F5F7FA; border: none; border-radius: 14px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
+                                <i class="fas fa-calendar-plus" style="font-size: 22px; color: #0066FF;"></i>
+                                <span style="font-size: 12px; font-weight: 600;">Book Vaccination</span>
+                            </button>
+                            <button class="clickable" style="background: #F5F7FA; border: none; border-radius: 14px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
+                                <i class="fas fa-file-medical" style="font-size: 22px; color: #00C48C;"></i>
+                                <span style="font-size: 12px; font-weight: 600;">View Records</span>
+                            </button>
+                            <button class="clickable" style="background: #F5F7FA; border: none; border-radius: 14px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
+                                <i class="fas fa-triangle-exclamation" style="font-size: 22px; color: #DC2626;"></i>
+                                <span style="font-size: 12px; font-weight: 600;">Allergies</span>
+                            </button>
+                            <button class="clickable" style="background: #F5F7FA; border: none; border-radius: 14px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
+                                <i class="fas fa-school" style="font-size: 22px; color: #8B5CF6;"></i>
+                                <span style="font-size: 12px; font-weight: 600;">School Records</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="11-chatbot.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">12 / 12</span>
+            <a href="index.html" class="nav-btn next">All Screens <i class="fas fa-th-large"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-signup.html">1</a><a href="02-role.html">2</a><a href="03-dashboard.html">3</a><a href="04-records.html">4</a><a href="05-medications.html">5</a><a href="06-appointments.html">6</a><a href="07-benefits.html">7</a><a href="08-guardians.html">8</a><a href="09-emergency.html">9</a><a href="10-map.html">10</a><a href="11-chatbot.html">11</a><a href="12-child.html" class="active">12</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

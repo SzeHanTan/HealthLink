@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Guardian Smart ID - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+    <style>
+        @keyframes scan-line {
+            0% { top: 10%; }
+            50% { top: 85%; }
+            100% { top: 10%; }
+        }
+        @keyframes pulse-corner {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .scan-line {
+            animation: scan-line 2s ease-in-out infinite;
+        }
+        .corner-pulse {
+            animation: pulse-corner 1.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>8d. Scan Guardian Smart ID</h1><p>Scan QR code to add guardian</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar light"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #0A0A0A; display: flex; flex-direction: column; height: calc(100% - 44px);">
+                    
+                    <!-- Header -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; position: relative; z-index: 10;">
+                        <a href="08c-add-guardian.html" style="width: 40px; height: 40px; background: rgba(255,255,255,0.15); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <h2 style="font-size: 17px; font-weight: 600; color: white;">Scan Smart ID</h2>
+                        <button style="width: 40px; height: 40px; background: rgba(255,255,255,0.15); border: none; border-radius: 50%; color: white;">
+                            <i class="fas fa-bolt"></i>
+                        </button>
+                    </div>
+
+                    <!-- Scanner View -->
+                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; position: relative;">
+                        
+                        <!-- Camera Preview (simulated) -->
+                        <div style="width: 100%; max-width: 280px; aspect-ratio: 1; position: relative; margin-bottom: 24px;">
+                            <!-- Scan Frame -->
+                            <div style="position: absolute; inset: 0; border: 3px solid transparent; border-radius: 24px;">
+                                <!-- Corner decorations -->
+                                <div class="corner-pulse" style="position: absolute; top: -3px; left: -3px; width: 40px; height: 40px; border-top: 4px solid #0066FF; border-left: 4px solid #0066FF; border-radius: 12px 0 0 0;"></div>
+                                <div class="corner-pulse" style="position: absolute; top: -3px; right: -3px; width: 40px; height: 40px; border-top: 4px solid #0066FF; border-right: 4px solid #0066FF; border-radius: 0 12px 0 0;"></div>
+                                <div class="corner-pulse" style="position: absolute; bottom: -3px; left: -3px; width: 40px; height: 40px; border-bottom: 4px solid #0066FF; border-left: 4px solid #0066FF; border-radius: 0 0 0 12px;"></div>
+                                <div class="corner-pulse" style="position: absolute; bottom: -3px; right: -3px; width: 40px; height: 40px; border-bottom: 4px solid #0066FF; border-right: 4px solid #0066FF; border-radius: 0 0 12px 0;"></div>
+                            </div>
+                            
+                            <!-- Scan line -->
+                            <div class="scan-line" style="position: absolute; left: 10%; right: 10%; height: 3px; background: linear-gradient(90deg, transparent, #0066FF, #0066FF, transparent); border-radius: 2px; box-shadow: 0 0 20px #0066FF;"></div>
+                            
+                            <!-- QR Code Preview (simulated - what camera sees) -->
+                            <a href="08e-guardian-found.html" class="clickable" style="position: absolute; inset: 40px; background: rgba(255,255,255,0.08); border-radius: 16px; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                                <div style="text-align: center; color: white;">
+                                    <i class="fas fa-qrcode" style="font-size: 64px; opacity: 0.4; margin-bottom: 8px;"></i>
+                                    <p style="font-size: 12px; opacity: 0.6;">Position QR code here</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div style="text-align: center; color: white; margin-bottom: 24px;">
+                            <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Scan Guardian's Smart ID</h3>
+                            <p style="font-size: 14px; opacity: 0.7; line-height: 1.5;">Ask your guardian to show their<br>HealthLink QR code</p>
+                        </div>
+
+                        <!-- Smart ID Example -->
+                        <div style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 16px; width: 100%; max-width: 280px;">
+                            <p style="font-size: 11px; color: rgba(255,255,255,0.6); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Look for this on their app:</p>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 56px; height: 56px; background: white; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-qrcode" style="font-size: 32px; color: #1A1D26;"></i>
+                                </div>
+                                <div style="color: white;">
+                                    <span style="font-size: 14px; font-weight: 600; display: block;">Smart Health ID</span>
+                                    <span style="font-size: 12px; opacity: 0.7;">Dashboard → My Card → QR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Options -->
+                    <div style="padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                        <div style="display: flex; justify-content: center; gap: 32px; margin-bottom: 16px;">
+                            <button style="display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: none; color: white; cursor: pointer;">
+                                <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-images" style="font-size: 20px;"></i>
+                                </div>
+                                <span style="font-size: 11px; opacity: 0.8;">Gallery</span>
+                            </button>
+                            <a href="08e-guardian-found.html" style="display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: none; color: white; cursor: pointer; text-decoration: none;">
+                                <div style="width: 64px; height: 64px; background: #0066FF; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,102,255,0.4);">
+                                    <i class="fas fa-camera" style="font-size: 24px;"></i>
+                                </div>
+                                <span style="font-size: 11px; opacity: 0.8;">Capture</span>
+                            </a>
+                            <button style="display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: none; color: white; cursor: pointer;">
+                                <div style="width: 48px; height: 48px; background: rgba(255,255,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-keyboard" style="font-size: 20px;"></i>
+                                </div>
+                                <span style="font-size: 11px; opacity: 0.8;">Enter ID</span>
+                            </button>
+                        </div>
+                        
+                        <p style="text-align: center; font-size: 12px; color: rgba(255,255,255,0.5);">
+                            <i class="fas fa-shield-check" style="margin-right: 4px;"></i>
+                            Secure scan - data is encrypted
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="08c-add-guardian.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Back</a>
+            <span class="screen-indicator">Scan Smart ID</span>
+            <a href="08e-guardian-found.html" class="nav-btn next">Found <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="08-guardians.html">List</a><a href="08c-add-guardian.html">Add</a><a href="08d-scan-guardian.html" class="active">Scan</a><a href="08e-guardian-found.html">Found</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Mode - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>9. Emergency Mode</h1><p>One-tap emergency with auto-share</p></div>
+    <div class="phone-container">
+        <div class="phone-frame" style="background: #1a1a1a;"><div class="phone-notch"></div>
+            <div class="phone-screen" style="background: linear-gradient(180deg, #DC2626 0%, #991B1B 100%);">
+                <div class="status-bar light"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="display: flex; flex-direction: column; align-items: center; padding: 24px 20px; color: white; height: calc(100% - 44px);">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <div class="pulse" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; margin: 0 auto 16px;">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <h1 style="font-size: 24px; font-weight: 800; letter-spacing: 2px;">EMERGENCY MODE</h1>
+                        <p style="font-size: 14px; opacity: 0.9;">Help is on the way</p>
+                    </div>
+                    <div style="display: flex; gap: 12px; width: 100%; margin-bottom: 24px;">
+                        <button class="clickable" style="flex: 1; background: white; border: none; padding: 20px 16px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; color: #DC2626;">
+                            <i class="fas fa-phone" style="font-size: 28px;"></i>
+                            <span style="font-size: 13px; font-weight: 600;">Call 999</span>
+                        </button>
+                        <a href="09b-choose-guardian.html" class="clickable" style="flex: 1; background: white; border: none; padding: 20px 16px; border-radius: 24px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; color: #4F46E5; text-decoration: none;">
+                            <i class="fas fa-user-shield" style="font-size: 28px;"></i>
+                            <span style="font-size: 13px; font-weight: 600;">Call Guardian</span>
+                        </a>
+                    </div>
+                    <div style="width: 100%; background: rgba(255,255,255,0.15); border-radius: 16px; padding: 16px; margin-bottom: 16px;">
+                        <h3 style="font-size: 12px; display: flex; align-items: center; gap: 6px; margin-bottom: 12px; opacity: 0.9;"><i class="fas fa-share-nodes"></i> Auto-Sharing</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 12px; display: flex; align-items: center; gap: 6px;"><i class="fas fa-location-dot"></i> Location</span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 12px; display: flex; align-items: center; gap: 6px;"><i class="fas fa-triangle-exclamation"></i> Allergies</span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 12px; display: flex; align-items: center; gap: 6px;"><i class="fas fa-pills"></i> Medications</span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 20px; font-size: 12px; display: flex; align-items: center; gap: 6px;"><i class="fas fa-droplet"></i> Blood: O+</span>
+                        </div>
+                    </div>
+                    <div style="width: 100%; margin-bottom: 16px;">
+                        <h3 style="font-size: 12px; margin-bottom: 8px; opacity: 0.9;">Nearest Hospital</h3>
+                        <a href="10-map.html" class="clickable" style="background: white; border-radius: 16px; padding: 14px; display: flex; align-items: center; gap: 12px; color: #1A1D26; text-decoration: none;">
+                            <i class="fas fa-hospital" style="font-size: 24px; color: #DC2626;"></i>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 14px; font-weight: 600;">Hospital Kuala Lumpur</h4>
+                                <span style="font-size: 12px; color: #6B7280;">2.3 km • 5 min drive</span>
+                            </div>
+                            <div style="width: 40px; height: 40px; background: #0066FF; border: none; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-directions"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; opacity: 0.8; margin-bottom: 16px;">
+                        <i class="fas fa-microphone" style="font-size: 18px;"></i>
+                        <span>Say "Help me!" to activate</span>
+                    </div>
+                    <a href="03-dashboard.html" class="clickable" style="width: 100%; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 14px; border-radius: 16px; font-size: 14px; font-weight: 600; margin-top: auto; text-align: center; text-decoration: none;">
+                        Cancel Emergency
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="08-guardians.html" class="nav-btn prev"><i class="fas fa-arrow-left"></i> Previous</a>
+            <span class="screen-indicator">9 / 12</span>
+            <a href="10-map.html" class="nav-btn next">Next <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="01-signup.html">1</a><a href="02-role.html">2</a><a href="03-dashboard.html">3</a><a href="04-records.html">4</a><a href="05-medications.html">5</a><a href="06-appointments.html">6</a><a href="07-benefits.html">7</a><a href="08-guardians.html">8</a><a href="09-emergency.html" class="active">9</a><a href="10-map.html">10</a><a href="11-chatbot.html">11</a><a href="12-child.html">12</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
+

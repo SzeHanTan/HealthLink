@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian AI Assistant - HealthLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../shared-styles.css">
+</head>
+<body>
+    <div class="app-selector">
+        <a href="index.html" class="citizen active"><i class="fas fa-user"></i> Citizen App</a>
+        <a href="../provider/index.html" class="provider"><i class="fas fa-hospital"></i> Provider App</a>
+    </div>
+    <div class="screen-title"><h1>3f. Guardian AI Assistant</h1><p>Help managing your dependents</p></div>
+    <div class="phone-container">
+        <div class="phone-frame"><div class="phone-notch"></div>
+            <div class="phone-screen">
+                <div class="status-bar"><span class="time">9:41</span><div class="status-icons"><i class="fas fa-signal"></i><i class="fas fa-wifi"></i><i class="fas fa-battery-full"></i></div></div>
+                <div class="screen-content" style="background: #F5F7FA; display: flex; flex-direction: column; height: calc(100% - 44px);">
+                    <!-- Header with Guardian Theme -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 20px 16px; background: linear-gradient(135deg, #4F46E5, #7C3AED);">
+                        <a href="03b-guardian-dashboard.html" style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none;"><i class="fas fa-arrow-left"></i></a>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div class="pulse" style="width: 36px; height: 36px; background: rgba(255,255,255,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;"><i class="fas fa-robot"></i></div>
+                            <div><h2 style="font-size: 16px; font-weight: 600; color: white;">Guardian Assistant</h2><span style="font-size: 11px; color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 4px;"><span style="width: 6px; height: 6px; background: #10B981; border-radius: 50%;"></span> Online</span></div>
+                        </div>
+                        <button style="width: 40px; height: 40px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: white; font-size: 16px;"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+                    
+                    <!-- Chat Messages -->
+                    <div style="flex: 1; overflow-y: auto; padding: 16px 20px;">
+                        <!-- AI Welcome -->
+                        <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0;"><i class="fas fa-robot"></i></div>
+                            <div style="background: white; padding: 14px; border-radius: 16px 16px 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); max-width: 75%;">
+                                <p style="font-size: 14px; line-height: 1.5; margin-bottom: 8px;">Hello Ahmad! 👋 I'm your Guardian Assistant. How can I help you manage your dependents today?</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <button style="background: #EEF2FF; border: 1px solid #C7D2FE; padding: 6px 12px; border-radius: 20px; font-size: 12px; color: #4F46E5; cursor: pointer;">Check dependent health</button>
+                                    <button style="background: #EEF2FF; border: 1px solid #C7D2FE; padding: 6px 12px; border-radius: 20px; font-size: 12px; color: #4F46E5; cursor: pointer;">Book appointment</button>
+                                    <button style="background: #EEF2FF; border: 1px solid #C7D2FE; padding: 6px 12px; border-radius: 20px; font-size: 12px; color: #4F46E5; cursor: pointer;">Medication reminders</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- User Message -->
+                        <div style="display: flex; justify-content: flex-end; margin-bottom: 16px;">
+                            <div style="background: #4F46E5; color: white; padding: 14px; border-radius: 16px 16px 0 16px; max-width: 75%;">
+                                <p style="font-size: 14px; line-height: 1.5;">When is Ahmad Jr.'s next vaccination?</p>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Response -->
+                        <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0;"><i class="fas fa-robot"></i></div>
+                            <div style="background: white; padding: 14px; border-radius: 16px 16px 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); max-width: 75%;">
+                                <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">Ahmad Jr. has an upcoming vaccination:</p>
+                                <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 12px; padding: 12px; margin-bottom: 10px;">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                        <div style="width: 40px; height: 40px; background: #FEE2E2; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                            <i class="fas fa-syringe" style="color: #DC2626;"></i>
+                                        </div>
+                                        <div>
+                                            <span style="font-size: 13px; font-weight: 600; color: #991B1B; display: block;">HPV Vaccine - Dose 1</span>
+                                            <span style="font-size: 12px; color: #B91C1C;">Due: December 20, 2024</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="font-size: 13px; color: #6B7280;">Would you like me to book this appointment?</p>
+                            </div>
+                        </div>
+                        
+                        <!-- User Message -->
+                        <div style="display: flex; justify-content: flex-end; margin-bottom: 16px;">
+                            <div style="background: #4F46E5; color: white; padding: 14px; border-radius: 16px 16px 0 16px; max-width: 75%;">
+                                <p style="font-size: 14px; line-height: 1.5;">Yes, please book it</p>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Response with Booking -->
+                        <div style="display: flex; gap: 10px; margin-bottom: 16px;">
+                            <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0;"><i class="fas fa-robot"></i></div>
+                            <div style="background: white; padding: 14px; border-radius: 16px 16px 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); max-width: 75%;">
+                                <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">Here are available slots at Klinik Kesihatan SS2:</p>
+                                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                                    <button style="background: #EEF2FF; border: 2px solid #4F46E5; color: #4F46E5; padding: 8px 12px; border-radius: 12px; font-size: 12px; cursor: pointer; font-weight: 600;">Dec 20, 9AM</button>
+                                    <button style="background: #F5F7FA; border: none; color: #1A1D26; padding: 8px 12px; border-radius: 12px; font-size: 12px; cursor: pointer;">Dec 20, 2PM</button>
+                                    <button style="background: #F5F7FA; border: none; color: #1A1D26; padding: 8px 12px; border-radius: 12px; font-size: 12px; cursor: pointer;">Dec 21, 10AM</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dependent Summary Card -->
+                        <div style="background: linear-gradient(135deg, #EEF2FF, #E0E7FF); border-radius: 16px; padding: 14px; margin-bottom: 16px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                                <i class="fas fa-users" style="color: #4F46E5;"></i>
+                                <span style="font-size: 13px; font-weight: 600; color: #4F46E5;">Your Dependents Summary</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <div style="flex: 1; background: white; border-radius: 10px; padding: 10px; text-align: center;">
+                                    <span style="font-size: 20px; font-weight: 700; color: #4F46E5; display: block;">3</span>
+                                    <span style="font-size: 10px; color: #6B7280;">Dependents</span>
+                                </div>
+                                <div style="flex: 1; background: white; border-radius: 10px; padding: 10px; text-align: center;">
+                                    <span style="font-size: 20px; font-weight: 700; color: #F59E0B; display: block;">2</span>
+                                    <span style="font-size: 10px; color: #6B7280;">Pending Tasks</span>
+                                </div>
+                                <div style="flex: 1; background: white; border-radius: 10px; padding: 10px; text-align: center;">
+                                    <span style="font-size: 20px; font-weight: 700; color: #10B981; display: block;">1</span>
+                                    <span style="font-size: 10px; color: #6B7280;">Upcoming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Input Area -->
+                    <div style="padding: 16px 20px; background: white; border-top: 1px solid #E5E7EB;">
+                        <div style="display: flex; gap: 12px; align-items: center;">
+                            <button style="width: 44px; height: 44px; background: linear-gradient(135deg, #4F46E5, #7C3AED); border: none; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center;"><i class="fas fa-microphone"></i></button>
+                            <input type="text" placeholder="Ask about your dependents..." style="flex: 1; padding: 12px 16px; border: 1px solid #E5E7EB; border-radius: 24px; font-size: 14px; outline: none;">
+                            <button style="width: 44px; height: 44px; background: #4F46E5; border: none; border-radius: 50%; color: white;"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                        <div style="display: flex; gap: 6px; margin-top: 10px; justify-content: center;">
+                            <span style="font-size: 11px; color: #6B7280;">🇲🇾 BM</span>
+                            <span style="font-size: 11px; color: #6B7280;">|</span>
+                            <span style="font-size: 11px; color: #4F46E5; font-weight: 600;">🇬🇧 EN</span>
+                            <span style="font-size: 11px; color: #6B7280;">|</span>
+                            <span style="font-size: 11px; color: #6B7280;">🇨🇳 中文</span>
+                            <span style="font-size: 11px; color: #6B7280;">|</span>
+                            <span style="font-size: 11px; color: #6B7280;">🇮🇳 தமிழ்</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <a href="03b-guardian-dashboard.html" class="nav-btn prev" style="background: #4F46E5;"><i class="fas fa-arrow-left"></i> Guardian Home</a>
+            <span class="screen-indicator">Guardian Chat</span>
+            <a href="03c-dependent-detail.html" class="nav-btn next" style="background: #4F46E5;">Dependents <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="screen-list"><a href="03b-guardian-dashboard.html" style="background: #4F46E5;">3b</a><a href="03f-guardian-chatbot.html" class="active" style="background: #7C3AED;">Chat</a><a href="03c-dependent-detail.html" style="background: #4F46E5;">3c</a></div>
+    </div>
+    <script src="../transitions.js"></script>
+</body>
+</html>
