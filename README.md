@@ -41,9 +41,9 @@ The unified app includes both personal health management and **Guardian Mode** f
 
 | # | Screen | Description |
 |---|--------|-------------|
-| 1 | **Sign Up** | MyKad / QR / NFC / Face Recognition verification |
-| 1b | **Face Scan** | Biometric face recognition |
-| 2 | **Role Detection** | Profile type selection (Adult/Child/Elderly/PWD) |
+| 1 | **Sign Up** | MyKad / QR / NFC / Fingerprint verification |
+| 1b | **Fingerprint Scan** | MyKad biometric fingerprint verification |
+| 2 | **Verification Complete** | Identity verified successfully |
 | 3 | **Dashboard** | Smart ID card (tap for QR) + role switcher |
 | 3b | **Guardian Mode** | Manage dependents (integrated) |
 | 3c | **Dependent Detail** | View dependent's health info |

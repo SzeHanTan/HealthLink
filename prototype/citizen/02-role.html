@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Role Selection - HealthLink</title>
+    <title>Verification Complete - HealthLink</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../shared-styles.css">
 </head>
@@ -14,8 +14,8 @@
     </div>
 
     <div class="screen-title">
-        <h1>2. Role Detection</h1>
-        <p>Profile type selection</p>
+        <h1>2. Verification Complete</h1>
+        <p>Identity verified successfully</p>
     </div>
 
     <div class="phone-container">
@@ -35,61 +35,34 @@
                         <a href="01-signup.html" style="width: 40px; height: 40px; border-radius: 50%; background: white; border: 1px solid #E5E7EB; display: flex; align-items: center; justify-content: center; color: #1A1D26; text-decoration: none;">
                             <i class="fas fa-arrow-left"></i>
                         </a>
-                        <span style="font-size: 16px; font-weight: 500;">Profile Setup</span>
+                        <span style="font-size: 16px; font-weight: 500;">Verification Complete</span>
                     </div>
                     
-                    <div style="text-align: center; margin-bottom: 32px;">
-                        <div style="font-size: 48px; color: #34C759; margin-bottom: 12px;">
-                            <i class="fas fa-check-circle"></i>
+                    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                        <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #34C759, #30B350); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: 0 8px 24px rgba(52, 199, 89, 0.3);">
+                            <i class="fas fa-check" style="font-size: 48px; color: white;"></i>
                         </div>
-                        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 4px;">Identity Verified!</h2>
-                        <p style="color: #6B7280; font-size: 14px;">Smart ID: <strong style="color: #0066FF; font-family: monospace;">CH-2024-889912</strong></p>
-                    </div>
-                    
-                    <div style="margin-bottom: 24px;">
-                        <h3 style="font-size: 14px; color: #6B7280; margin-bottom: 16px;">Select Your Profile Type</h3>
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                            <button class="clickable" onclick="this.style.borderColor='#0066FF'; this.style.background='#E6F0FF';" style="background: white; border: 2px solid #E5E7EB; border-radius: 16px; padding: 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
-                                <i class="fas fa-user" style="font-size: 28px; color: #6B7280;"></i>
-                                <span style="font-weight: 600; font-size: 14px;">Adult</span>
-                            </button>
-                            <button class="clickable" style="background: white; border: 2px solid #E5E7EB; border-radius: 16px; padding: 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
-                                <i class="fas fa-child" style="font-size: 28px; color: #6B7280;"></i>
-                                <span style="font-weight: 600; font-size: 14px;">Child</span>
-                                <small style="font-size: 11px; color: #6B7280;">Link to parent</small>
-                            </button>
-                            <button class="clickable" style="background: white; border: 2px solid #E5E7EB; border-radius: 16px; padding: 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
-                                <i class="fas fa-person-cane" style="font-size: 28px; color: #6B7280;"></i>
-                                <span style="font-weight: 600; font-size: 14px;">Elderly</span>
-                            </button>
-                            <button class="clickable" style="background: white; border: 2px solid #E5E7EB; border-radius: 16px; padding: 20px 12px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer;">
-                                <i class="fas fa-wheelchair" style="font-size: 28px; color: #6B7280;"></i>
-                                <span style="font-weight: 600; font-size: 14px;">PWD</span>
-                            </button>
+                        <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #1A1D26;">Identity Verified!</h2>
+                        <p style="color: #6B7280; font-size: 14px; margin-bottom: 16px;">Your MyKad has been successfully verified</p>
+                        <div style="background: #E6F0FF; border-radius: 12px; padding: 12px 20px; display: inline-block;">
+                            <span style="color: #6B7280; font-size: 12px; display: block;">Smart ID</span>
+                            <strong style="color: #0066FF; font-family: monospace; font-size: 18px;">CH-2024-889912</strong>
+                        </div>
+                        
+                        <div style="margin-top: 32px; background: white; border-radius: 16px; padding: 16px 20px; width: 100%; text-align: left;">
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                                <i class="fas fa-shield-check" style="color: #34C759; font-size: 20px;"></i>
+                                <span style="font-size: 14px; color: #1A1D26;">Fingerprint matched with JPN database</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-lock" style="color: #0066FF; font-size: 20px;"></i>
+                                <span style="font-size: 14px; color: #1A1D26;">Your data is encrypted & secure</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-radius: 16px; padding: 4px; margin-bottom: 24px;">
-                        <label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; cursor: pointer;">
-                            <span style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
-                                <i class="fas fa-universal-access" style="color: #0066FF;"></i> Enable Accessibility Mode
-                            </span>
-                            <div style="width: 44px; height: 24px; background: #0066FF; border-radius: 12px; position: relative;">
-                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; right: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
-                            </div>
-                        </label>
-                        <label style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; cursor: pointer;">
-                            <span style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
-                                <i class="fas fa-volume-high" style="color: #0066FF;"></i> Voice Assistance
-                            </span>
-                            <div style="width: 44px; height: 24px; background: #E5E7EB; border-radius: 12px; position: relative;">
-                                <div style="width: 20px; height: 20px; background: white; border-radius: 50%; position: absolute; top: 2px; left: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);"></div>
-                            </div>
-                        </label>
-                    </div>
-                    
-                    <a href="03-dashboard.html" class="clickable" style="width: 100%; background: #0066FF; color: white; border: none; padding: 16px; border-radius: 16px; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">
-                        Continue <i class="fas fa-arrow-right"></i>
+                    <a href="03-dashboard.html" class="clickable" style="width: 100%; background: #0066FF; color: white; border: none; padding: 16px; border-radius: 16px; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; margin-top: 24px;">
+                        Go to Dashboard <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
