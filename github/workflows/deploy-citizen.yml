@@ -1,0 +1,55 @@
+name: Deploy Citizen App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Prepare files
+        run: |
+          # Create deployment directory
+          mkdir -p _site
+          
+          # Copy all citizen HTML files
+          cp -r prototype/citizen/* _site/
+          
+          # Copy shared CSS and JS files
+          cp prototype/shared-styles.css _site/
+          cp prototype/transitions.js _site/
+          
+          # Update paths in all HTML files
+          find _site -name "*.html" -type f -exec sed -i 's|href="../shared-styles.css"|href="shared-styles.css"|g' {} \;
+          find _site -name "*.html" -type f -exec sed -i 's|src="../transitions.js"|src="transitions.js"|g' {} \;
+          find _site -name "*.html" -type f -exec sed -i 's|href="../provider/|href="provider/|g' {} \;
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
